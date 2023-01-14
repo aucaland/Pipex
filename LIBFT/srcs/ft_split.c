@@ -19,20 +19,6 @@ static int	contain_char(char c, char const s)
 	return (0);
 }
 
-static char	**free_tab(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-	return (NULL);
-}
-
 static char	**ft_count_and_fill(char **tab, const char *s, size_t count, char c)
 {
 	unsigned int	i;
@@ -53,7 +39,7 @@ static char	**ft_count_and_fill(char **tab, const char *s, size_t count, char c)
 		}
 		tab[word_number++] = ft_substr(s, i - nbr_letter, nbr_letter);
 		if (!tab[word_number - 1])
-			return (free_tab(tab));
+			return (ft_free_tab(tab));
 	}
 	return (tab);
 }

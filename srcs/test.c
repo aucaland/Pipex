@@ -6,16 +6,15 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/13 11:49:49 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/14 11:56:04 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <signal.h>
-#include <sys/wait.h>
+#include "../pipex.h"
 
 int main(int argc, char *argv[])
 {

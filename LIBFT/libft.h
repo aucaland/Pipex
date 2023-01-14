@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:19:32 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/10 15:23:37 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/14 11:47:36 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ long long int		ft_pow_long(long long int nbr_base, int p);
 
 void				ft_free(void *ptr);
 void				ft_freetabi(int **tab, int size);
-char				**free_tab(char **tab);
+char				**ft_free_tab(char **tab);
 
 /*				Utils_no_libft			*/
 
