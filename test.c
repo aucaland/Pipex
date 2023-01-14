@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/02 16:12:08 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/13 11:49:49 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,35 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
 
 int main(int argc, char *argv[])
 {
-	int id = fork();
-	if (id != 0)
-		fork();
-	printf("Hello world\n");
+	(void)argc;
+	(void)argv;
+
+	int pid = fork();
+
+	if (pid == 0)
+	{
+		kill(pid, SIGSTOP);
+		sleep(1);
+		kill(pid, SIGCONT);
+		printf("Some message\n");
+		kill(pid, SIGKILL);
+	}
+	else
+	{
+		//sleep(1);
+		kill(pid, SIGSTOP);
+		sleep(1);
+		kill(pid, SIGCONT);
+
+		wait(NULL);
+
+	}
+	return (0);
 	//printf("Salut from id %d\n", id);
 //	if (id == 0)
 //	{
