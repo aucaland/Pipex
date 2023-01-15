@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/15 17:21:25 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/15 20:07:02 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	get_full_path(t_pipex *px)
 	tmp = px->env_paths;
 	while (tmp[++i])
 		px->env_paths[i] = ft_strjoin(tmp[i], "/");
+	//px->env_paths[i] = NULL;
 //	ft_printf("%s", px->env_paths[0]);
 }
 
@@ -51,27 +52,28 @@ void get_cmd_paths(t_pipex *px)
 	char *join_cmd;
 	int	i;
 
-	i = -1;
 	tmp = px->env_paths;
-	while (tmp)
+	while (*tmp)
 	{
+		i = -1;
 		while (++i < px->nb_cmd)
 		{
-			join_cmd = ft_strjoin(*tmp, px->cmd[i]);
-			if (!join_cmd)
-				exit(1);
-			if (access(px->cmd[i], F_OK) == 0 && (px->cmd_paths[i]) == NULL)
+			if (access(px->cmd[i], X_OK) == 0 && !px->cmd_paths[i])
 				px->cmd_paths[i] = px->cmd[i];
-			else if (access(join_cmd, F_OK) == 0 && (px->cmd_paths[i]) == NULL)
-				px->cmd_paths[i] = join_cmd;
-			free(join_cmd);
+			else if (!px->cmd_paths[i])
+			{
+				join_cmd = ft_strjoin(*tmp, px->cmd[i]);
+				if (!join_cmd)
+					exit(1);
+				if (access(join_cmd, X_OK) == 0)
+					px->cmd_paths[i] = join_cmd;
+				else
+					free(join_cmd);
+			}
 			if (i == (px->nb_cmd - 1) && !++tmp && px->cmd_paths[i] == NULL)
 				exit(1);
-
 		}
-		i = -1;
 	}
-	ft_printf("%s", px->cmd_paths[0]);
 }
 
 void get_cmds(t_pipex *px)
@@ -89,7 +91,7 @@ void get_cmds(t_pipex *px)
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
-		split_cmd = ft_split(*px->cmd_args, ' ');
+		split_cmd = ft_split(px->cmd_args[i], ' ');
 		if (!split_cmd[i])
 			exit(1);
 		px->cmd[i] = split_cmd[0];
@@ -113,10 +115,12 @@ void init_struct_values(t_pipex *px, int argc, char **argv, char **envp)
 	px->cmd_args = argv + 2;
 	px->nb_cmd = argc - 3;
 	px->env = envp;
+	px->nb_pipes =
 	get_cmds(px);
 	get_files(px, argv, argc);
 	get_full_path(px);
 	get_cmd_paths(px);
+	ft_printf("%s", px->cmd_paths[1]);
 }
 
 int main(int argc, char **argv, char **envp)
