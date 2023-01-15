@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/14 11:56:04 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/15 17:21:25 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,114 @@
 #include <signal.h>
 #include "../pipex.h"
 
-int main(int argc, char *argv[])
+void	get_full_path(t_pipex *px)
 {
-	(void)argc;
-	(void)argv;
+	char	**tmp;
+	char	*env_full_path;
+	int 	i;
 
-	int pid = fork();
+	i = -1;
+	tmp = px->env;
+	env_full_path = NULL;
 
-	if (pid == 0)
+	while (tmp)
 	{
-		kill(pid, SIGSTOP);
-		sleep(1);
-		kill(pid, SIGCONT);
-		printf("Some message\n");
-		kill(pid, SIGKILL);
+
+		if (ft_strncmp("PATH", *tmp, 4) == 0)
+		{
+			env_full_path = ft_substr(*tmp, 5, ft_strlen(*tmp));
+			break;
+		}
+		tmp++;
 	}
-	else
+	//ft_printf("%s\n", env_full_path);
+	px->env_paths = ft_split(env_full_path, ':');
+	//ft_printf("%s\n", px->env_paths[2]);
+	tmp = px->env_paths;
+	while (tmp[++i])
+		px->env_paths[i] = ft_strjoin(tmp[i], "/");
+//	ft_printf("%s", px->env_paths[0]);
+}
+
+void get_cmd_paths(t_pipex *px)
+{
+	char **tmp;
+	char *join_cmd;
+	int	i;
+
+	i = -1;
+	tmp = px->env_paths;
+	while (tmp)
 	{
-		//sleep(1);
-		kill(pid, SIGSTOP);
-		sleep(1);
-		kill(pid, SIGCONT);
+		while (++i < px->nb_cmd)
+		{
+			join_cmd = ft_strjoin(*tmp, px->cmd[i]);
+			if (!join_cmd)
+				exit(1);
+			if (access(px->cmd[i], F_OK) == 0 && (px->cmd_paths[i]) == NULL)
+				px->cmd_paths[i] = px->cmd[i];
+			else if (access(join_cmd, F_OK) == 0 && (px->cmd_paths[i]) == NULL)
+				px->cmd_paths[i] = join_cmd;
+			free(join_cmd);
+			if (i == (px->nb_cmd - 1) && !++tmp && px->cmd_paths[i] == NULL)
+				exit(1);
 
-		wait(NULL);
-
+		}
+		i = -1;
 	}
-	return (0);
-	//printf("Salut from id %d\n", id);
-//	if (id == 0)
-//	{
-//		printf("Salut from child process ID = %d\n", id);
-//	}
-//	else
-//		printf("Salut from parent process ID = %d\n", id);
+	ft_printf("%s", px->cmd_paths[0]);
+}
+
+void get_cmds(t_pipex *px)
+{
+	char	**split_cmd;
+	int		i;
+
+	i = -1;
+	split_cmd = malloc(sizeof(char*) * px->nb_cmd + 1);
+	split_cmd[px->nb_cmd] = "\0";
+	px->cmd = malloc(sizeof(char*) * px->nb_cmd + 1);
+	px->cmd_paths = malloc(sizeof(char*) * px->nb_cmd + 1);
+	px->cmd_paths[px->nb_cmd] = "\0";
+	px->cmd[px->nb_cmd] = "\0";
+	while (++i < px->nb_cmd)
+	{
+		px->cmd_paths[i] = NULL;
+		split_cmd = ft_split(*px->cmd_args, ' ');
+		if (!split_cmd[i])
+			exit(1);
+		px->cmd[i] = split_cmd[0];
+		if (!px->cmd)
+			exit(1);
+	}
+}
+
+void get_files(t_pipex *px, char **argv, int argc)
+{
+	px->infile = open(argv[1], O_RDONLY);
+	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
+}
+
+void init_struct_values(t_pipex *px, int argc, char **argv, char **envp)
+{
+//	(void)argv;
+//	(void)argc;
+//	(void)envp;
+
+	px->cmd_args = argv + 2;
+	px->nb_cmd = argc - 3;
+	px->env = envp;
+	get_cmds(px);
+	get_files(px, argv, argc);
+	get_full_path(px);
+	get_cmd_paths(px);
+}
+
+int main(int argc, char **argv, char **envp)
+{
+	t_pipex *px;
+
+	px = malloc(sizeof(t_pipex));
+	init_struct_values(px, argc, argv, envp);
 	return 0;
 }
