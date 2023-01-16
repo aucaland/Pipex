@@ -3,6 +3,15 @@
 
 #include "LIBFT/libft.h"
 #include <sys/wait.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h> //TODO : erase
+
+typedef struct s_child
+{
+	int pid;
+
+}						t_child;
 
 typedef struct s_pipex
 {
@@ -15,6 +24,8 @@ typedef struct s_pipex
 	char **cmd_paths;
 	int nb_cmd;
 	int nb_pipes;
+	t_child *child;
+	int *pipes[2];
 
-}	t_pipex;
+}				t_pipex;
 #endif //PIPEX_PIPEX_H

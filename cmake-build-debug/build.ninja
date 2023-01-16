@@ -55,8 +55,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi.c.o: C_COMPILER__Pipex_Debug /home
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi_base.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_atoi_base.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi_base.c.o.d
@@ -64,8 +62,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi_base.c.o: C_COMPILER__Pipex_Debug 
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_bzero.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_bzero.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_bzero.c.o.d
@@ -73,8 +69,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_bzero.c.o: C_COMPILER__Pipex_Debug /hom
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_calloc.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_calloc.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_calloc.c.o.d
@@ -82,8 +76,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_calloc.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_convert_base.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base.c.o.d
@@ -91,8 +83,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base.c.o: C_COMPILER__Pipex_Deb
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base2.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_convert_base2.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base2.c.o.d
@@ -100,8 +90,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base2.c.o: C_COMPILER__Pipex_De
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_dec_to_hex.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_dec_to_hex.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_dec_to_hex.c.o.d
@@ -109,8 +97,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_dec_to_hex.c.o: C_COMPILER__Pipex_Debug
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_free.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free.c.o.d
@@ -118,8 +104,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free.c.o: C_COMPILER__Pipex_Debug /home
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free_tab.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_free_tab.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free_tab.c.o.d
@@ -127,8 +111,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free_tab.c.o: C_COMPILER__Pipex_Debug /
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_freetabi.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_freetabi.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_freetabi.c.o.d
@@ -136,8 +118,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_freetabi.c.o: C_COMPILER__Pipex_Debug /
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalnum.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_isalnum.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalnum.c.o.d
@@ -145,8 +125,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalnum.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalpha.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_isalpha.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalpha.c.o.d
@@ -154,8 +132,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalpha.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isascii.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_isascii.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isascii.c.o.d
@@ -163,8 +139,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isascii.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isdigit.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_isdigit.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isdigit.c.o.d
@@ -172,8 +146,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isdigit.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isprint.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_isprint.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isprint.c.o.d
@@ -181,8 +153,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isprint.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isspace.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_isspace.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isspace.c.o.d
@@ -190,8 +160,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isspace.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_itoa.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_itoa.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_itoa.c.o.d
@@ -199,8 +167,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_itoa.c.o: C_COMPILER__Pipex_Debug /home
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_back.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstadd_back.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_back.c.o.d
@@ -208,8 +174,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_back.c.o: C_COMPILER__Pipex_Debu
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_front.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstadd_front.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_front.c.o.d
@@ -217,8 +181,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_front.c.o: C_COMPILER__Pipex_Deb
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstclear.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstclear.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstclear.c.o.d
@@ -226,8 +188,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstclear.c.o: C_COMPILER__Pipex_Debug /
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstdelone.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstdelone.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstdelone.c.o.d
@@ -235,8 +195,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstdelone.c.o: C_COMPILER__Pipex_Debug 
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstiter.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstiter.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstiter.c.o.d
@@ -244,8 +202,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstiter.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstlast.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstlast.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstlast.c.o.d
@@ -253,8 +209,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstlast.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstmap.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstmap.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstmap.c.o.d
@@ -262,8 +216,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstmap.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstnew.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstnew.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstnew.c.o.d
@@ -271,8 +223,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstnew.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstsize.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_lstsize.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstsize.c.o.d
@@ -280,8 +230,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstsize.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memchr.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_memchr.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memchr.c.o.d
@@ -289,8 +237,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memchr.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcmp.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_memcmp.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcmp.c.o.d
@@ -298,8 +244,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcmp.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcpy.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_memcpy.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcpy.c.o.d
@@ -307,8 +251,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcpy.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memmove.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_memmove.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memmove.c.o.d
@@ -316,8 +258,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memmove.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memset.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_memset.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memset.c.o.d
@@ -325,8 +265,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memset.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_print_cust.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_print_cust.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_print_cust.c.o.d
@@ -334,8 +272,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_print_cust.c.o: C_COMPILER__Pipex_Debug
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_printf.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_printf.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_printf.c.o.d
@@ -343,8 +279,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_printf.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putchar_fd.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_putchar_fd.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putchar_fd.c.o.d
@@ -352,8 +286,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putchar_fd.c.o: C_COMPILER__Pipex_Debug
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putendl_fd.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_putendl_fd.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putendl_fd.c.o.d
@@ -361,8 +293,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putendl_fd.c.o: C_COMPILER__Pipex_Debug
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putnbr_fd.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_putnbr_fd.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putnbr_fd.c.o.d
@@ -370,8 +300,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putnbr_fd.c.o: C_COMPILER__Pipex_Debug 
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putstr_fd.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_putstr_fd.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putstr_fd.c.o.d
@@ -379,8 +307,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putstr_fd.c.o: C_COMPILER__Pipex_Debug 
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_split.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_split.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_split.c.o.d
@@ -388,8 +314,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_split.c.o: C_COMPILER__Pipex_Debug /hom
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strchr.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strchr.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strchr.c.o.d
@@ -397,8 +321,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strchr.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strdup.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strdup.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strdup.c.o.d
@@ -406,8 +328,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strdup.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_striteri.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_striteri.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_striteri.c.o.d
@@ -415,8 +335,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_striteri.c.o: C_COMPILER__Pipex_Debug /
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strjoin.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strjoin.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strjoin.c.o.d
@@ -424,8 +342,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strjoin.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcat.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strlcat.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcat.c.o.d
@@ -433,8 +349,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcat.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcpy.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strlcpy.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcpy.c.o.d
@@ -442,8 +356,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcpy.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlen.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strlen.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlen.c.o.d
@@ -451,8 +363,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlen.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strmapi.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strmapi.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strmapi.c.o.d
@@ -460,8 +370,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strmapi.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strncmp.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strncmp.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strncmp.c.o.d
@@ -469,8 +377,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strncmp.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strnstr.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strnstr.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strnstr.c.o.d
@@ -478,8 +384,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strnstr.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strrchr.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strrchr.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strrchr.c.o.d
@@ -487,8 +391,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strrchr.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strtrim.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_strtrim.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strtrim.c.o.d
@@ -496,8 +398,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strtrim.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_substr.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_substr.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_substr.c.o.d
@@ -505,8 +405,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_substr.c.o: C_COMPILER__Pipex_Debug /ho
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_tolower.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_tolower.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_tolower.c.o.d
@@ -514,8 +412,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_tolower.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_toupper.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_toupper.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_toupper.c.o.d
@@ -523,8 +419,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_toupper.c.o: C_COMPILER__Pipex_Debug /h
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_udec_to_hex.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/ft_udec_to_hex.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/ft_udec_to_hex.c.o.d
@@ -532,8 +426,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/ft_udec_to_hex.c.o: C_COMPILER__Pipex_Debu
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/get_next_line.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line.c.o.d
@@ -541,8 +433,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line.c.o: C_COMPILER__Pipex_Debug
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line_utils.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/srcs/get_next_line_utils.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line_utils.c.o.d
@@ -550,8 +440,6 @@ build CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line_utils.c.o: C_COMPILER__Pipex
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/LIBFT/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
 
 build CMakeFiles/Pipex.dir/srcs/test.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/srcs/test.c || cmake_object_order_depends_target_Pipex
   DEP_FILE = CMakeFiles/Pipex.dir/srcs/test.c.o.d
@@ -559,8 +447,13 @@ build CMakeFiles/Pipex.dir/srcs/test.c.o: C_COMPILER__Pipex_Debug /home/aurel/Do
   INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
   OBJECT_DIR = CMakeFiles/Pipex.dir
   OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/srcs
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
-  TARGET_PDB = Pipex.pdb
+
+build CMakeFiles/Pipex.dir/srcs/childs.c.o: C_COMPILER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/srcs/childs.c || cmake_object_order_depends_target_Pipex
+  DEP_FILE = CMakeFiles/Pipex.dir/srcs/childs.c.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/aurel/Documents/CLionProjects/Pipex/. -I/home/aurel/Documents/CLionProjects/Pipex/LIBFT -I/home/aurel/Documents/CLionProjects/Pipex/objs -I/home/aurel/Documents/CLionProjects/Pipex/srcs
+  OBJECT_DIR = CMakeFiles/Pipex.dir
+  OBJECT_FILE_DIR = CMakeFiles/Pipex.dir/srcs
 
 
 # =============================================================================
@@ -570,14 +463,13 @@ build CMakeFiles/Pipex.dir/srcs/test.c.o: C_COMPILER__Pipex_Debug /home/aurel/Do
 #############################################
 # Link the executable Pipex
 
-build Pipex: C_EXECUTABLE_LINKER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_atoi.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_bzero.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_calloc.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_convert_base.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_convert_base2.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_dec_to_hex.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_free.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_free_tab.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_freetabi.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isalnum.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isalpha.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isascii.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isdigit.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isprint.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isspace.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_itoa.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstadd_back.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstadd_front.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstclear.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstdelone.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstiter.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstlast.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstmap.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstnew.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstsize.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memchr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memcmp.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memcpy.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memmove.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memset.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_print_cust.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_printf.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putchar_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putendl_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putnbr_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putstr_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_split.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strchr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strdup.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_striteri.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strjoin.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strlcat.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strlcpy.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strlen.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strmapi.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strncmp.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strnstr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strrchr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strtrim.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_substr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_tolower.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_toupper.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_udec_to_hex.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/get_next_line.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/get_next_line_utils.o /home/aurel/Documents/CLionProjects/Pipex/objs/test.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi_base.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_bzero.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_calloc.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base2.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_dec_to_hex.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free_tab.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_freetabi.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalnum.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalpha.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isascii.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isdigit.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isprint.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isspace.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_itoa.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_back.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_front.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstclear.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstdelone.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstiter.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstlast.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstmap.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstnew.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstsize.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memchr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcmp.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcpy.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memmove.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memset.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_print_cust.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_printf.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putchar_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putendl_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putnbr_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putstr_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_split.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strchr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strdup.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_striteri.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strjoin.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcat.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcpy.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlen.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strmapi.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strncmp.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strnstr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strrchr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strtrim.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_substr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_tolower.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_toupper.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_udec_to_hex.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line_utils.c.o CMakeFiles/Pipex.dir/srcs/test.c.o
+build Pipex: C_EXECUTABLE_LINKER__Pipex_Debug /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_atoi.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_bzero.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_calloc.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_convert_base.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_convert_base2.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_dec_to_hex.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_free.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_free_tab.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_freetabi.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isalnum.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isalpha.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isascii.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isdigit.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isprint.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_isspace.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_itoa.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstadd_back.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstadd_front.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstclear.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstdelone.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstiter.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstlast.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstmap.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstnew.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_lstsize.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memchr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memcmp.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memcpy.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memmove.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_memset.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_print_cust.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_printf.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putchar_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putendl_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putnbr_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_putstr_fd.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_split.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strchr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strdup.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_striteri.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strjoin.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strlcat.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strlcpy.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strlen.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strmapi.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strncmp.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strnstr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strrchr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_strtrim.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_substr.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_tolower.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_toupper.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/ft_udec_to_hex.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/get_next_line.o /home/aurel/Documents/CLionProjects/Pipex/LIBFT/objs/get_next_line_utils.o /home/aurel/Documents/CLionProjects/Pipex/objs/test.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_atoi_base.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_bzero.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_calloc.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_convert_base2.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_dec_to_hex.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_free_tab.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_freetabi.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalnum.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isalpha.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isascii.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isdigit.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isprint.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_isspace.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_itoa.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_back.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstadd_front.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstclear.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstdelone.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstiter.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstlast.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstmap.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstnew.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_lstsize.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memchr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcmp.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memcpy.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memmove.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_memset.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_print_cust.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_printf.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putchar_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putendl_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putnbr_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_putstr_fd.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_split.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strchr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strdup.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_striteri.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strjoin.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcat.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlcpy.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strlen.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strmapi.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strncmp.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strnstr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strrchr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_strtrim.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_substr.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_tolower.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_toupper.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/ft_udec_to_hex.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line.c.o CMakeFiles/Pipex.dir/LIBFT/srcs/get_next_line_utils.c.o CMakeFiles/Pipex.dir/srcs/test.c.o CMakeFiles/Pipex.dir/srcs/childs.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Pipex.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/Pipex.dir/
   TARGET_FILE = Pipex
-  TARGET_PDB = Pipex.pdb
+  TARGET_PDB = Pipex.dbg
 
 
 #############################################
@@ -622,14 +514,14 @@ build all: phony Pipex
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /home/aurel/Documents/CLionProjects/Pipex/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /home/aurel/Documents/CLionProjects/Pipex/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /home/aurel/Documents/CLionProjects/Pipex/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /home/aurel/Documents/CLionProjects/Pipex/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

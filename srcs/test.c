@@ -6,14 +6,10 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/15 20:07:02 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:11:19 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-#include <signal.h>
 #include "../pipex.h"
 
 void	get_full_path(t_pipex *px)
@@ -108,19 +104,21 @@ void get_files(t_pipex *px, char **argv, int argc)
 
 void init_struct_values(t_pipex *px, int argc, char **argv, char **envp)
 {
-//	(void)argv;
-//	(void)argc;
-//	(void)envp;
-
 	px->cmd_args = argv + 2;
 	px->nb_cmd = argc - 3;
 	px->env = envp;
-	px->nb_pipes =
+	px->nb_pipes = px->nb_cmd - 1;
 	get_cmds(px);
 	get_files(px, argv, argc);
 	get_full_path(px);
 	get_cmd_paths(px);
 	ft_printf("%s", px->cmd_paths[1]);
+}
+
+void make_pipes(t_pipex *px)
+{
+	px->pipes = malloc(sizeof(int) * px->nb_pipes);
+
 }
 
 int main(int argc, char **argv, char **envp)
@@ -129,5 +127,6 @@ int main(int argc, char **argv, char **envp)
 
 	px = malloc(sizeof(t_pipex));
 	init_struct_values(px, argc, argv, envp);
+	make_pipes(px);
 	return 0;
 }
