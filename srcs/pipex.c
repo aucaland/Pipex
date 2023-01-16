@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/16 15:34:31 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/16 21:56:53 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,13 +102,28 @@ void get_files(t_pipex *px, char **argv, int argc)
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 }
 
+void create_child_struct(t_pipex *px)
+{
+	int i;
+
+	i = -1;
+	px->child = malloc(sizeof(t_child) * px->nb_pipes);
+	if (!px->child)
+		exit(1);
+	while (++i < px->nb_pipes)
+		px->child->nbr = i;
+}
+
 void init_struct_values(t_pipex *px, int argc, char **argv, char **envp)
 {
 	px = malloc(sizeof(t_pipex));
+	if (!px)
+		exit(1);
 	px->cmd_args = argv + 2;
 	px->nb_cmd = argc - 3;
 	px->env = envp;
 	px->nb_pipes = px->nb_cmd - 1;
+	create_child_struct(px);
 	get_cmds(px);
 	get_files(px, argv, argc);
 	get_full_path(px);
@@ -118,14 +133,31 @@ void init_struct_values(t_pipex *px, int argc, char **argv, char **envp)
 
 void make_pipes(t_pipex *px)
 {
-	px->pipes = malloc(sizeof(*px->pipes) * px->nb_pipes);
+	int i;
+
+	i = -1;
+	px->pipes_fd = malloc(sizeof(*px->pipes_fd) * px->nb_pipes);
+	if (!px->pipes_fd)
+		exit(1);
+	while (++i < px->nb_pipes)
+	{
+		if (pipe(px->pipes_fd[i]) < 0)
+			exit(1);
+	}
+}
+
+void make_child(t_pipex *px, int nbr)
+{
+	int px->child->pid = fork();
 
 }
 
 int main(int argc, char **argv, char **envp)
 {
 	t_pipex px;
+	int i;
 
+	i = 0;
 	if (argc != 5)
 	{
 		ft_printf("error argc");
@@ -133,5 +165,7 @@ int main(int argc, char **argv, char **envp)
 	}
 	init_struct_values(&px, argc, argv, envp);
 	make_pipes(&px);
+	while (++i < px.nb_cmd)
+		make_child(&px, i);
 	return 0;
 }

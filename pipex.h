@@ -9,7 +9,7 @@
 
 typedef struct s_child
 {
-	int pid;
+	int nbr;
 
 }						t_child;
 
@@ -25,7 +25,7 @@ typedef struct s_pipex
 	int nb_cmd;
 	int nb_pipes;
 	t_child *child;
-	int (*pipes)[2];
+	int (*pipes_fd)[2];
 
 }				t_pipex;
 
