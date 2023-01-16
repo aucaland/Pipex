@@ -123,6 +123,6 @@ add_executable(Pipex
         LIBFT/libft.h
         LIBFT/Makefile
         objs/test.o
-        srcs/test.c
+        srcs/pipex.c
         Makefile
         pipex.h srcs/childs.c)
