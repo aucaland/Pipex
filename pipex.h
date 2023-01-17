@@ -7,6 +7,10 @@
 #include <unistd.h>
 #include <stdio.h> //TODO : erase
 #include <errno.h>
+#include "errors.h"
+
+void	ft_exit_errors(int count, ...);
+void	ft_exit_free(int count, ...);
 
 typedef struct s_child
 {

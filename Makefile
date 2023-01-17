@@ -3,9 +3,9 @@ SRC_DIR		= srcs
 OBJ_DIR		= objs
 SRC_DIR_B		= srcs_b
 OBJ_DIR_B		= objs_b
-SRC_NAME	= pipex.c
-SRC_NAME_BONUS = pipex_bonus.c
-INCS_PIPEX = pipex.h pipex_bonus.h
+SRC_NAME	= pipex.c errors.c
+SRC_NAME_BONUS = pipex_bonus.c errors.c
+INCS_PIPEX = pipex.h pipex_bonus.h errors.h
 ##### BONUS #####
 
 OBJ_NAME		=	$(SRC_NAME:%.c=%.o)

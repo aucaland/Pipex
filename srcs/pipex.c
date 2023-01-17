@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/17 16:40:54 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:14:17 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,10 +204,7 @@ int main(int argc, char **argv, char **envp)
 
 	i = -1;
 	if (argc < 5)
-	{
-		ft_printf("error argc");
-		exit(1);
-	}
+		ft_exit_errors(1, ARGC);
 	px = init_struct_values(&px, argc, argv, envp);
 	//make_pipes(px);
 	if (dup2(px->infile, STDIN_FILENO) == -1)
