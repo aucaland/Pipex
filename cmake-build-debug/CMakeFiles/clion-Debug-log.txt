@@ -3,7 +3,7 @@
 CMake Error at CMakeLists.txt:11 (add_executable):
   Cannot find source file:
 
-    LIBFT/objs/ft_atoi.o
+    objs/test.o
 
 
 CMake Error at CMakeLists.txt:11 (add_executable):

@@ -125,4 +125,4 @@ add_executable(Pipex
         objs/test.o
         srcs/pipex.c
         Makefile
-        pipex.h srcs/childs.c pipex_bonus.h srcs/pipex.c)
+        pipex.h srcs/childs.c pipex_bonus.h srcs/pipex.c srcs/pipex.c srcs/pipex.c)

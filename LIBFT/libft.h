@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:19:32 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/14 11:47:36 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/17 14:49:18 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,8 @@ char				**ft_free_tab(char **tab);
 /*				Utils_no_libft			*/
 
 int					ft_isspace(char str);
+size_t				ft_strlen_tab(char **s);
+void				close_fds(int count, ...);
 
 //convert_base(piscine) //
 

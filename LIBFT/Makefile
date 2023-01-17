@@ -58,7 +58,9 @@ SRCS_NAME		=	ft_atoi.c\
 				ft_convert_base.c\
 				ft_convert_base2.c\
 				ft_freetabi.c\
-				ft_free_tab.c
+				ft_free_tab.c\
+				ft_strlen_tab.c\
+				close_fds.c
 
 OBJS		=	$(SRCS_NAME:%.c=%.o)
 OBJ = $(addprefix $(OBJS_DIR)/,$(OBJS))

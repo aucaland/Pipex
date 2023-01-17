@@ -6,10 +6,12 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdio.h> //TODO : erase
+#include <errno.h>
 
 typedef struct s_child
 {
 	int nbr;
+	pid_t pid;
 
 }						t_child;
 
@@ -18,14 +20,14 @@ typedef struct s_pipex
 	int infile;
 	int outfile;
 	char **cmd;
-	char **cmd_args;
+	char ***cmd_args;
 	char **env;
 	char **env_paths;
 	char **cmd_paths;
 	int nb_cmd;
 	int nb_pipes;
 	t_child *child;
-	int (*pipes_fd)[2];
+	int (pipes_fd)[2];
 
 }				t_pipex;
 
