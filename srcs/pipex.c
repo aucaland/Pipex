@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/17 17:14:17 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/18 22:15:52 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,8 @@ void get_cmds(t_pipex *px, char **args)
 void get_files(t_pipex *px, char **argv, int argc)
 {
 	px->infile = open(argv[1], O_RDONLY);
-	if (px->infile == -1)
-		exit(1);
+//	if (px->infile == -1)
+//		exit(1);
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 }
 
@@ -139,7 +139,6 @@ t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	(*px)->nb_pipes = (*px)->nb_cmd - 1;
 	create_child_struct((*px));
 	get_cmds((*px), args);
-	ft_printf("OK");
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
 	get_full_path((*px));
@@ -170,8 +169,22 @@ void do_in_child(t_pipex *px, int nbr)
 	dprintf(1, "child  = 0 :%d\n",px->child[nbr].pid);
 	dprintf(1, " child nbr : %d\n",nbr);
 	dprintf(1, " nbr cmd : %d\n",px->nb_cmd);
+	if (nbr == 0 && px->infile == -1)
+	{
+		perror("nom du fichier: ");
+		return ;
+	}
+//	ft_printf("access : %d", access(px->cmd_args[px->nb_cmd + 2][0], W_OK));
+	if (nbr == px->nb_cmd - 1 && access(px->cmd_args[px->nb_cmd + 2][0], W_OK) == -1)
+		return ;
 	if (nbr + 1 < px->nb_cmd && dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
 		exit(1);
+	if (nbr == px->nb_cmd - 1 && dup2(px->infile, STDIN_FILENO) == -1)
+	{
+		//ft_printf("%d", px->infile);
+		//printf("%s", strerror(errno));
+		exit(1);
+	}
 	if (nbr + 1 == px->nb_cmd && dup2(px->outfile, STDOUT_FILENO) == -1)
 	{
 		ft_printf("OUT END FAIL");
@@ -179,7 +192,7 @@ void do_in_child(t_pipex *px, int nbr)
 	}
 	close_fds(2, px->pipes_fd[1], px->infile);
 	execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
-	ft_printf("FAIL EXEC");
+	ft_printf("fail exec : %s", strerror(errno));
 }
 
 void make_child(t_pipex *px, int nbr)
@@ -193,7 +206,7 @@ void make_child(t_pipex *px, int nbr)
 		do_in_child(px, nbr);
 	if (nbr + 1 < px->nb_cmd && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
 		exit(1);
-	waitpid(px->child[nbr].pid, NULL, 0);
+
 	close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
 }
 
@@ -207,15 +220,11 @@ int main(int argc, char **argv, char **envp)
 		ft_exit_errors(1, ARGC);
 	px = init_struct_values(&px, argc, argv, envp);
 	//make_pipes(px);
-	if (dup2(px->infile, STDIN_FILENO) == -1)
-	{
-		//ft_printf("%d", px->infile);
-		//printf("%s", strerror(errno));
-		exit(1);
-	}
 	//execve(px->cmd_paths[1], px->cmd_args[1], px->env);
 	while (++i < px->nb_cmd)
 		make_child(px, i);
 	close_fds(2, px->infile, px->outfile);
+	while (waitpid(-1, NULL, 0) > 0)
+		;
 	return 0;
 }
