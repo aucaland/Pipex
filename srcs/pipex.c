@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 15:35:31 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 20:40:21 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,8 +180,6 @@ void make_child(t_pipex *px, int nbr)
 	if (pipe(px->pipes_fd) == -1)
 		exit(1);
 	px->child[nbr].pid = fork();
-
-
 	// if nbr == 0 check fd input == -1
 	// if nbr == last check fd
 	if (px->child[nbr].pid == -1)
@@ -190,7 +188,6 @@ void make_child(t_pipex *px, int nbr)
 		do_in_child(px, nbr);
 	if (nbr + 1 < px->nb_cmd && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
 		exit(1);
-
 	close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
 }
 
