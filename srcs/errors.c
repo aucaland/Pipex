@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 04:26:01 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 22:31:25 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ void	clean_px(t_pipex *px)
 
 void	ft_exit_pipex(t_pipex *px, char *err, char *location)
 {
+	if (err == PERROR)
+	{
+		perror("");
+		ft_free_pipex(px);
+	}
 	ft_putstr_fd(err, 2);
 	ft_putendl_fd(location, 2);
 	if (px)
