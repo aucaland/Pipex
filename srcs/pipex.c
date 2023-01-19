@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 20:40:21 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/19 21:49:55 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,41 +154,55 @@ void do_in_child(t_pipex *px, int nbr)
 	dprintf(1, "child  = 0 :%d\n",px->child[nbr].pid);
 	dprintf(1, " child nbr : %d\n",nbr);
 
-	if (nbr == 0 && px->infile == -1)
+//	if (nbr == 0 && px->infile == -1)
+//	{
+//		perror("nom du fichier: ");
+//		exit(0);
+//	}
+	if (nbr + 1 < px->nb_cmd)
 	{
-		perror("nom du fichier: ");
-		exit(0);
+		if (dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
+			exit(1);
+		close(px->pipes_fd[1]);
 	}
-	if (nbr + 1 < px->nb_cmd && dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
-		exit(1);
-	if (nbr + 1 == px->nb_cmd && dup2(px->outfile, STDOUT_FILENO) == -1)
+	else
 	{
-		ft_printf("OUT END FAIL");
-		exit(0);
+		//ft_printf("OUT END FAIL");
+		if (dup2(px->outfile, STDOUT_FILENO) == -1)
+			exit(0);
+		close(px->outfile);
+		close(px->pipes_fd[1]);
 	}
 //	dprintf(1, " nbr cmd : %d\n",px->nb_cmd);
 //	dprintf(1, " nbr cmd : %s\n",px->cmd_paths[nbr]);
-	close_fds(2, px->pipes_fd[1], px->infile);
-//	ft_printf("%s", px->cmd_paths[nbr]);
-//	ft_printf("%s", px->cmd_args[nbr][0]);
+//	close_fds(2, px->pipes_fd[1], px->infile);
+//	dprintf(2,"%s", px->cmd_paths[nbr]);
+//	dprintf(2, "%s\n", px->cmd_args[nbr][1]);
 	execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
 	ft_printf("fail exec : %s", strerror(errno));
 }
 
 void make_child(t_pipex *px, int nbr)
 {
-	if (pipe(px->pipes_fd) == -1)
+	if (nbr > 0)
+	{
+		if (dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
+			exit(1);
+		close(px->pipes_fd[0]);
+	}
+	if (nbr < px->nb_cmd - 1 && pipe(px->pipes_fd) == -1)
 		exit(1);
 	px->child[nbr].pid = fork();
-	// if nbr == 0 check fd input == -1
-	// if nbr == last check fd
 	if (px->child[nbr].pid == -1)
 		exit(1);
+	if (px->child[nbr].pid)
+		return ;
+	// if nbr == 0 check fd input == -1
+	// if nbr == last check fd
+
 	if (!px->child[nbr].pid)
 		do_in_child(px, nbr);
-	if (nbr + 1 < px->nb_cmd && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
-		exit(1);
-	close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
+	//close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
 }
 
 int main(int argc, char **argv, char **envp)
@@ -210,8 +224,14 @@ int main(int argc, char **argv, char **envp)
 		i++;
 	}
 	while (++i < px->nb_cmd)
+	{
 		make_child(px, i);
-	close_fds(2, px->infile, px->outfile);
+		if (i < px->nb_cmd - 1)
+			close(px->pipes_fd[1]);
+		else
+			close(px->outfile);
+	}
+	close(STDIN_FILENO);
 	while (waitpid(-1, NULL, 0) > 0)
 		;
 	ft_free_pipex(px);
