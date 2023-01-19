@@ -6,31 +6,43 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/17 17:11:34 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 03:04:39 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void ft_exit_errors(int count, ...)
+void	clean_px(t_pipex *px)
 {
-	va_list ap;
-	va_start(ap, count);
+	px->cmd = NULL;
+	px->cmd_args = NULL;
+	px->env = NULL;
+	px->env_paths = NULL;
+	px->cmd_paths = NULL;
+}
 
-	for (int i = 0; i < count; i++)
-		ft_printf("%s", va_arg(ap, int));
-	va_end(ap);
+void	ft_exit_pipex(t_pipex *px, char *err, char *location)
+{
+	ft_putstr_fd(err, 2);
+	ft_putstr_fd(location, 2);
+	if (px)
+		ft_free_pipex(px);
 	exit(EXIT_FAILURE);
 }
 
-void ft_exit_free(int count, ...)
+void ft_free_pipex(t_pipex *px)
 {
-	va_list ap;
-	va_start(ap, count);
-
-	for (int i = 0; i < count; i++) {
-		int fd = va_arg(ap, int);
-		close(fd);
+	if (px->cmd)
+		ft_free_tab(px->cmd);
+	if (px->cmd_args)
+	{
+		ft_free_tab(*px->cmd_args);
+		free(px->cmd_args);
 	}
-	va_end(ap);
+	if (px->env_paths)
+		ft_free_tab(px->env_paths);
+	if (px->cmd_paths)
+		ft_free_tab(px->cmd_paths);
+	free(px);
 }
+

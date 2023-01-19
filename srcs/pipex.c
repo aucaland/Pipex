@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/18 22:15:52 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 03:06:07 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,18 +77,18 @@ void get_cmds(t_pipex *px, char **args)
 	int		i;
 
 	i = -1;
-	split_cmd = malloc(sizeof(char*) * px->nb_cmd + 1);
-	split_cmd[px->nb_cmd] = "\0";
-	px->cmd = malloc(sizeof(char*) * px->nb_cmd + 1);
-	px->cmd_paths = malloc(sizeof(char*) * px->nb_cmd + 1);
-	px->cmd_paths[px->nb_cmd] = "\0";
-	px->cmd[px->nb_cmd] = "\0";
+	px->cmd = ft_calloc(sizeof(char*) , px->nb_cmd + 1);
+	if (!px->cmd)
+		ft_exit_pipex(px, MALLOC, "get_cmds");
+	px->cmd_paths = ft_calloc(sizeof(char*) , px->nb_cmd + 1);
+	if (!px->cmd_paths)
+		ft_exit_pipex(px, MALLOC, "get_cmds");
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
 		split_cmd = ft_split(args[i], ' ');
 		if (!split_cmd[0])
-			exit(1);
+			ft_exit_pipex(px, MALLOC, "get_cmds");
 		px->cmd[i] = split_cmd[0];
 	}
 }
@@ -130,10 +130,12 @@ void get_cmds_args(t_pipex *px, char **args)
 t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
 	char	**args;
+
 	args = argv + 2;
 	*px = malloc(sizeof(t_pipex));
 	if (!*px)
-		exit(1);
+		ft_exit_pipex(*px, MALLOC, "init_struct_values");
+	clean_px(*px);
 	(*px)->nb_cmd = argc - 3;
 	(*px)->env = envp;
 	(*px)->nb_pipes = (*px)->nb_cmd - 1;
@@ -143,8 +145,8 @@ t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	get_files((*px), argv, argc);
 	get_full_path((*px));
 	get_cmd_paths((*px));
-	ft_printf("cmd 1 :%s\n", (*px)->cmd_args[0][0]);
-	ft_printf("cmd two :%s\n", (*px)->cmd_args[1][0]);
+//	ft_printf("cmd 1 :%s\n", (*px)->cmd_args[0][0]);
+//	ft_printf("cmd two :%s\n", (*px)->cmd_args[1][0]);
 	return ((*px));
 }
 
@@ -169,22 +171,13 @@ void do_in_child(t_pipex *px, int nbr)
 	dprintf(1, "child  = 0 :%d\n",px->child[nbr].pid);
 	dprintf(1, " child nbr : %d\n",nbr);
 	dprintf(1, " nbr cmd : %d\n",px->nb_cmd);
-	if (nbr == 0 && px->infile == -1)
-	{
-		perror("nom du fichier: ");
-		return ;
-	}
-//	ft_printf("access : %d", access(px->cmd_args[px->nb_cmd + 2][0], W_OK));
-	if (nbr == px->nb_cmd - 1 && access(px->cmd_args[px->nb_cmd + 2][0], W_OK) == -1)
-		return ;
+//	if (nbr == 0 && px->infile == -1)
+//	{
+//		perror("nom du fichier: ");
+//		exit(0);
+//	}
 	if (nbr + 1 < px->nb_cmd && dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
 		exit(1);
-	if (nbr == px->nb_cmd - 1 && dup2(px->infile, STDIN_FILENO) == -1)
-	{
-		//ft_printf("%d", px->infile);
-		//printf("%s", strerror(errno));
-		exit(1);
-	}
 	if (nbr + 1 == px->nb_cmd && dup2(px->outfile, STDOUT_FILENO) == -1)
 	{
 		ft_printf("OUT END FAIL");
@@ -200,6 +193,10 @@ void make_child(t_pipex *px, int nbr)
 	if (pipe(px->pipes_fd) == -1)
 		exit(1);
 	px->child[nbr].pid = fork();
+
+
+	// if nbr == 0 check fd input == -1
+	// if nbr == last check fd
 	if (px->child[nbr].pid == -1)
 		exit(1);
 	if (!px->child[nbr].pid)
@@ -216,11 +213,17 @@ int main(int argc, char **argv, char **envp)
 	int i;
 
 	i = -1;
-	if (argc < 5)
-		ft_exit_errors(1, ARGC);
+	if (argc < 5 || !envp)
+		ft_exit_pipex(NULL, ARGC, "");
 	px = init_struct_values(&px, argc, argv, envp);
 	//make_pipes(px);
-	//execve(px->cmd_paths[1], px->cmd_args[1], px->env);
+	if (dup2(px->infile, STDIN_FILENO) == -1)
+	{
+		//ft_printf("%d", px->infile);
+
+		//printf("%s", strerror(errno));
+		i++;
+	}
 	while (++i < px->nb_cmd)
 		make_child(px, i);
 	close_fds(2, px->infile, px->outfile);

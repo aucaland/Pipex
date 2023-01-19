@@ -9,9 +9,6 @@
 #include <errno.h>
 #include "errors.h"
 
-void	ft_exit_errors(int count, ...);
-void	ft_exit_free(int count, ...);
-
 typedef struct s_child
 {
 	int nbr;
@@ -34,6 +31,12 @@ typedef struct s_pipex
 	int (pipes_fd)[2];
 
 }				t_pipex;
+
+void	ft_exit_pipex(t_pipex *px, char *err, char *location);
+void	ft_free_pipex(t_pipex *px);
+void	clean_px(t_pipex *px);
+
+
 
 
 #endif //PIPEX_PIPEX_H
