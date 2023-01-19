@@ -6,39 +6,39 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 03:06:07 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 04:37:56 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
 
-void	get_full_path(t_pipex *px)
+void	get_full_path(t_pipex *px, char *env_full_path)
 {
 	char	**tmp;
-	char	*env_full_path;
 	int 	i;
 
 	i = -1;
 	tmp = px->env;
-	env_full_path = NULL;
-	while (tmp)
+	while (tmp && !env_full_path)
 	{
-
 		if (ft_strncmp("PATH", *tmp, 4) == 0)
 		{
 			env_full_path = ft_substr(*tmp, 5, ft_strlen(*tmp));
-			break;
+			if (!env_full_path)
+				ft_exit_pipex(px, MALLOC, "get_full_path");
 		}
 		tmp++;
 	}
-	//ft_printf("%s\n", env_full_path);
 	px->env_paths = ft_split(env_full_path, ':');
-	//ft_printf("%s\n", px->env_paths[2]);
+	free(env_full_path);
+	if (!px->env_paths)
+		ft_exit_pipex(px, MALLOC, "get_full_path");
 	tmp = px->env_paths;
 	while (tmp[++i])
+	{
+		free(px->env_paths[i]);
 		px->env_paths[i] = ft_strjoin(tmp[i], "/");
-	//px->env_paths[i] = NULL;
-//	ft_printf("%s", px->env_paths[0]);
+	}
 }
 
 void get_cmd_paths(t_pipex *px)
@@ -65,9 +65,8 @@ void get_cmd_paths(t_pipex *px)
 				else
 					free(join_cmd);
 			}
-			if (i == (px->nb_cmd - 1) && !++tmp && px->cmd_paths[i] == NULL)
-				exit(1);
 		}
+		tmp++;
 	}
 }
 
@@ -89,28 +88,24 @@ void get_cmds(t_pipex *px, char **args)
 		split_cmd = ft_split(args[i], ' ');
 		if (!split_cmd[0])
 			ft_exit_pipex(px, MALLOC, "get_cmds");
-		px->cmd[i] = split_cmd[0];
+		px->cmd[i] = ft_strdup(split_cmd[0]);
+		if (!px->cmd[i])
+			ft_exit_pipex(px, MALLOC, "");
+		ft_free_tab(split_cmd);
 	}
 }
 
 void get_files(t_pipex *px, char **argv, int argc)
 {
 	px->infile = open(argv[1], O_RDONLY);
-//	if (px->infile == -1)
-//		exit(1);
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 }
 
 void create_child_struct(t_pipex *px)
 {
-	int i;
-
-	i = -1;
 	px->child = malloc(sizeof(t_child) * px->nb_pipes);
 	if (!px->child)
-		exit(1);
-	while (++i < px->nb_pipes)
-		px->child->nbr = i;
+		ft_exit_pipex(px, MALLOC, "create_child");
 }
 
 void get_cmds_args(t_pipex *px, char **args)
@@ -118,20 +113,24 @@ void get_cmds_args(t_pipex *px, char **args)
 	int	i;
 
 	i = -1;
-	px->cmd_args = malloc(sizeof(char **) * px->nb_cmd + 1);
+	px->cmd_args = malloc(sizeof(char **) * px->nb_cmd);
+	if (!px->cmd_args)
+		ft_exit_pipex(px, MALLOC, "get_cmds_args");
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_args[i] = ft_split(args[i], ' ');
-		if (ft_strlen_tab(px->cmd_args[i]) > 2 || !px->cmd_args[i])
-			exit(1);//TODO : free
+		if (!px->cmd_args[i])
+			ft_exit_pipex(px, MALLOC, "get_cmds_args");
 	}
 }
 
 t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
 	char	**args;
+	char	*env_full_path;
 
 	args = argv + 2;
+	env_full_path = NULL;
 	*px = malloc(sizeof(t_pipex));
 	if (!*px)
 		ft_exit_pipex(*px, MALLOC, "init_struct_values");
@@ -143,27 +142,10 @@ t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	get_cmds((*px), args);
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
-	get_full_path((*px));
+	get_full_path(*px, env_full_path);
 	get_cmd_paths((*px));
-//	ft_printf("cmd 1 :%s\n", (*px)->cmd_args[0][0]);
-//	ft_printf("cmd two :%s\n", (*px)->cmd_args[1][0]);
 	return ((*px));
 }
-
-//void make_pipes(t_pipex *px)
-//{
-//	int i;
-//
-//	i = -1;
-//	px->pipes_fd = malloc(sizeof(*px->pipes_fd) * px->nb_pipes);
-//	if (!px->pipes_fd)
-//		exit(1);
-//	while (++i < px->nb_pipes)
-//	{
-//		if (pipe(px->pipes_fd[i]) < 0)
-//			exit(1);
-//	}
-//}
 
 void do_in_child(t_pipex *px, int nbr)
 {
@@ -213,6 +195,7 @@ int main(int argc, char **argv, char **envp)
 	int i;
 
 	i = -1;
+	px = NULL;
 	if (argc < 5 || !envp)
 		ft_exit_pipex(NULL, ARGC, "");
 	px = init_struct_values(&px, argc, argv, envp);
@@ -229,5 +212,6 @@ int main(int argc, char **argv, char **envp)
 	close_fds(2, px->infile, px->outfile);
 	while (waitpid(-1, NULL, 0) > 0)
 		;
-	return 0;
+	ft_free_pipex(px);
+	exit(EXIT_SUCCESS);
 }

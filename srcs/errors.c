@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 03:04:39 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 04:26:01 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,16 @@ void ft_free_pipex(t_pipex *px)
 		ft_free_tab(px->cmd);
 	if (px->cmd_args)
 	{
-		ft_free_tab(*px->cmd_args);
+		while ((px->nb_cmd)-- > 0)
+			ft_free_tab(px->cmd_args[px->nb_cmd]);
 		free(px->cmd_args);
 	}
 	if (px->env_paths)
 		ft_free_tab(px->env_paths);
 	if (px->cmd_paths)
 		ft_free_tab(px->cmd_paths);
+	if (px->child)
+		free(px->child);
 	free(px);
 }
 

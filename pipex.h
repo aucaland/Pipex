@@ -11,7 +11,6 @@
 
 typedef struct s_child
 {
-	int nbr;
 	pid_t pid;
 
 }						t_child;
