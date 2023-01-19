@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 15:04:37 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/19 15:35:31 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ void	get_full_path(t_pipex *px, char *env_full_path)
 		}
 		tmp++;
 	}
-	px->env_paths = ft_split(env_full_path, ':');
+	tmp = ft_split(env_full_path, ':');
 	free(env_full_path);
-	if (!px->env_paths)
+	if (!tmp)
 		ft_exit_pipex(px, MALLOC, "get_full_path");
-	tmp = px->env_paths;
+	px->env_paths = ft_calloc(sizeof(char *) , ft_strlen_tab(tmp) + 1);
+	if (!px->env_paths)
+		ft_exit_pipex(px, MALLOC, "get full path");
 	while (tmp[++i])
-	{
-		free(px->env_paths[i]);
 		px->env_paths[i] = ft_strjoin(tmp[i], "/");
-	}
+	ft_free_tab(tmp);
 }
 
 void get_cmd_paths(t_pipex *px)
