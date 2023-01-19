@@ -7,4 +7,5 @@
 #define MALLOC "Failed memory allocation in function : "
 #define MISSING_CMD "Command  in function : "
 #define PERROR "PERROR"
+#define DUP2	"Duplicate with dup2 function failed"
 #endif //ERRORS_H

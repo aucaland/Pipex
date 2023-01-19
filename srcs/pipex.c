@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 22:31:25 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/19 23:54:56 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,19 @@ void get_cmds(t_pipex *px, char **args)
 void get_files(t_pipex *px, char **argv, int argc)
 {
 	px->infile = open(argv[1], O_RDONLY);
+	if (px->infile == -1)
+	{
+		ft_putstr_fd("bash: ", 2);
+		ft_putstr_fd(argv[1], 2);
+		perror(" ");
+	}
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
+	if (px->outfile == -1)
+	{
+		ft_putstr_fd("bash: ", 2);
+		ft_putstr_fd(argv[1], 2);
+		perror(" ");
+	}
 }
 
 void create_child_struct(t_pipex *px)
@@ -150,15 +162,14 @@ t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	get_files((*px), argv, argc);
 	get_full_path(*px, env_full_path);
 	get_cmd_paths((*px));
-	dprintf(2, "OK");
 	return ((*px));
 }
 
 void do_in_child(t_pipex *px, int nbr)
 {
 	close(px->pipes_fd[0]);
-	dprintf(1, "child  = 0 :%d\n",px->child[nbr].pid);
-	dprintf(1, " child nbr : %d\n",nbr);
+//	dprintf(1, "child  = 0 :%d\n",px->child[nbr].pid);
+//	dprintf(1, " child nbr : %d\n",nbr);
 
 //	if (nbr == 0 && px->infile == -1)
 //	{
@@ -168,7 +179,7 @@ void do_in_child(t_pipex *px, int nbr)
 	if (nbr + 1 < px->nb_cmd)
 	{
 		if (dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
-			exit(1);
+			ft_exit_pipex(px, PERROR, "do_in_child");
 		close(px->pipes_fd[1]);
 	}
 	else
@@ -183,18 +194,22 @@ void do_in_child(t_pipex *px, int nbr)
 //	dprintf(1, " nbr cmd : %s\n",px->cmd_paths[nbr]);
 //	close_fds(2, px->pipes_fd[1], px->infile);
 //	dprintf(2,"%s", px->cmd_paths[nbr]);
-//	dprintf(2, "%s\n", px->cmd_args[nbr][1]);
+	//dprintf(2, "%s\n", px->cmd_args[nbr][1]);
 	execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
-	perror("");
+	ft_putstr_fd("bash: ", 2);
+	ft_putstr_fd(px->cmd_args[nbr][0], 2);
+	ft_putendl_fd(": command not found", 2);
+	exit (1);
 }
 
 void make_child(t_pipex *px, int nbr)
 {
 	if (nbr > 0)
 	{
-		if (dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
+		if (px->pipes_fd[0] != -1 && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
 		{
-			ft_exit_pipex(px, PERROR, "");
+			close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
+			ft_exit_pipex(px, PERROR, "make_child");
 		}
 		close(px->pipes_fd[0]);
 	}
@@ -202,7 +217,7 @@ void make_child(t_pipex *px, int nbr)
 		exit(1);
 	px->child[nbr].pid = fork();
 	if (px->child[nbr].pid == -1)
-		exit(1);
+		ft_exit_pipex(px, PERROR, "make_child");
 	if (px->child[nbr].pid)
 		return ;
 	// if nbr == 0 check fd input == -1
@@ -224,20 +239,25 @@ int main(int argc, char **argv, char **envp)
 		ft_exit_pipex(NULL, ARGC, "");
 	px = init_struct_values(&px, argc, argv, envp);
 	//make_pipes(px);
-	if (dup2(px->infile, STDIN_FILENO) == -1)
+	if (px->infile == -1)
 	{
-		//ft_printf("%d", px->infile);
-
-		printf("%s", strerror(errno));
+		if (pipe(px->pipes_fd) == -1)
+			ft_free_pipex(px);
+		close(px->pipes_fd[1]);
 		i++;
 	}
+	else if (dup2(px->infile, STDIN_FILENO) == -1)
+		ft_exit_pipex(px, PERROR, "main");
 	while (++i < px->nb_cmd)
 	{
 		make_child(px, i);
 		if (i < px->nb_cmd - 1)
 			close(px->pipes_fd[1]);
 		else
+		{
 			close(px->outfile);
+			close(px->pipes_fd[1]);
+		}
 	}
 	close(STDIN_FILENO);
 	while (waitpid(-1, NULL, 0) > 0)
