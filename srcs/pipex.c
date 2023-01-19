@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 23:54:56 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/20 00:28:29 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,13 +108,15 @@ void get_files(t_pipex *px, char **argv, int argc)
 	{
 		ft_putstr_fd("bash: ", 2);
 		ft_putstr_fd(argv[1], 2);
-		perror(" ");
+		ft_putstr_fd(": ", 2);
+		perror("");
 	}
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 	if (px->outfile == -1)
 	{
 		ft_putstr_fd("bash: ", 2);
 		ft_putstr_fd(argv[1], 2);
+		ft_putstr_fd(": ", 2);
 		perror(" ");
 	}
 }
