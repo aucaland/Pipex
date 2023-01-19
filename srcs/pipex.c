@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 21:49:55 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/19 22:24:15 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ void get_cmd_paths(t_pipex *px)
 		while (++i < px->nb_cmd)
 		{
 			if (access(px->cmd[i], X_OK) == 0 && !px->cmd_paths[i])
-				px->cmd_paths[i] = px->cmd[i];
+				px->cmd_paths[i] = ft_strdup(px->cmd[i]);
 			else if (!px->cmd_paths[i])
 			{
 				join_cmd = ft_strjoin(*tmp, px->cmd[i]);
-				if (!join_cmd)
+				if (!join_cmd && px->cmd[i])
 					exit(1);
 				if (access(join_cmd, X_OK) == 0)
 					px->cmd_paths[i] = join_cmd;
@@ -86,6 +86,11 @@ void get_cmds(t_pipex *px, char **args)
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
+		if (args[i][0] == '\0')
+		{
+			px->cmd[i] = NULL;
+			continue ;
+		}
 		split_cmd = ft_split(args[i], ' ');
 		if (!split_cmd[0])
 			ft_exit_pipex(px, MALLOC, "get_cmds");
@@ -145,6 +150,7 @@ t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	get_files((*px), argv, argc);
 	get_full_path(*px, env_full_path);
 	get_cmd_paths((*px));
+	dprintf(2, "OK");
 	return ((*px));
 }
 
@@ -179,7 +185,7 @@ void do_in_child(t_pipex *px, int nbr)
 //	dprintf(2,"%s", px->cmd_paths[nbr]);
 //	dprintf(2, "%s\n", px->cmd_args[nbr][1]);
 	execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
-	ft_printf("fail exec : %s", strerror(errno));
+	perror("");
 }
 
 void make_child(t_pipex *px, int nbr)

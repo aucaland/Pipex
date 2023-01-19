@@ -24,7 +24,7 @@ void	clean_px(t_pipex *px)
 void	ft_exit_pipex(t_pipex *px, char *err, char *location)
 {
 	ft_putstr_fd(err, 2);
-	ft_putstr_fd(location, 2);
+	ft_putendl_fd(location, 2);
 	if (px)
 		ft_free_pipex(px);
 	exit(EXIT_FAILURE);
