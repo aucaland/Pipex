@@ -12,6 +12,7 @@ pipex.h
 script.sh
 srcs
 srcs_b
+valgrind.log
 vgcore.13508
 vgcore.79841
 vgcore.79972

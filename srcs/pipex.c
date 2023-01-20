@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/20 10:42:22 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/20 11:09:22 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -248,18 +248,19 @@ int main(int argc, char **argv, char **envp)
 		close(px->pipes_fd[1]);
 		i++;
 	}
-	else if (dup2(px->infile, STDIN_FILENO) == -1)
-		ft_exit_pipex(px, PERROR, "main");
+	else
+	{
+		if (dup2(px->infile, STDIN_FILENO) == -1)
+			ft_exit_pipex(px, PERROR, "main");
+		close(px->infile);
+	}
 	while (++i < px->nb_cmd)
 	{
 		make_child(px, i);
 		if (i < px->nb_cmd - 1)
 			close(px->pipes_fd[1]);
 		else
-		{
 			close(px->outfile);
-			close(px->pipes_fd[1]);
-		}
 	}
 	close(STDIN_FILENO);
 	while (waitpid(-1, NULL, 0) > 0)
