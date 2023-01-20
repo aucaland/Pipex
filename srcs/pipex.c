@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/20 00:28:29 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/20 10:42:22 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,12 +121,12 @@ void get_files(t_pipex *px, char **argv, int argc)
 	}
 }
 
-void create_child_struct(t_pipex *px)
-{
-	px->child = malloc(sizeof(t_child) * px->nb_pipes);
-	if (!px->child)
-		ft_exit_pipex(px, MALLOC, "create_child");
-}
+//void create_child_struct(t_pipex *px)
+//{
+//	px->child = malloc(sizeof(t_child) * px->nb_pipes + 1);
+//	if (!px->child)
+//		ft_exit_pipex(px, MALLOC, "create_child");
+//}
 
 void get_cmds_args(t_pipex *px, char **args)
 {
@@ -157,8 +157,8 @@ t_pipex *init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	clean_px(*px);
 	(*px)->nb_cmd = argc - 3;
 	(*px)->env = envp;
-	(*px)->nb_pipes = (*px)->nb_cmd - 1;
-	create_child_struct((*px));
+//	(*px)->nb_pipes = (*px)->nb_cmd - 1;
+//	create_child_struct((*px));
 	get_cmds((*px), args);
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
@@ -217,15 +217,15 @@ void make_child(t_pipex *px, int nbr)
 	}
 	if (nbr < px->nb_cmd - 1 && pipe(px->pipes_fd) == -1)
 		exit(1);
-	px->child[nbr].pid = fork();
-	if (px->child[nbr].pid == -1)
+	px->pid = fork();
+	if (px->pid == -1)
 		ft_exit_pipex(px, PERROR, "make_child");
-	if (px->child[nbr].pid)
+	if (px->pid)
 		return ;
 	// if nbr == 0 check fd input == -1
 	// if nbr == last check fd
 
-	if (!px->child[nbr].pid)
+	if (!px->pid)
 		do_in_child(px, nbr);
 	//close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
 }

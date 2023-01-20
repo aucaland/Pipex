@@ -9,11 +9,11 @@
 #include <errno.h>
 #include "errors.h"
 
-typedef struct s_child
-{
-	pid_t pid;
-
-}						t_child;
+//typedef struct s_child
+//{
+//	pid_t pid;
+//
+//}						t_child;
 
 typedef struct s_pipex
 {
@@ -25,9 +25,10 @@ typedef struct s_pipex
 	char **env_paths;
 	char **cmd_paths;
 	int nb_cmd;
-	int nb_pipes;
-	t_child *child;
+//	int nb_pipes;
+//	t_child *child;
 	int (pipes_fd)[2];
+	int pid;
 
 }				t_pipex;
 

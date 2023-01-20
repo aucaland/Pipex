@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/19 22:53:48 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/20 10:39:15 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	clean_px(t_pipex *px)
 
 void	ft_exit_pipex(t_pipex *px, char *err, char *location)
 {
-	if (err == PERROR)
+	if (ft_strncmp(err, PERROR, 6))
 	{
 		perror("");
 		ft_free_pipex(px);
@@ -50,8 +50,6 @@ void ft_free_pipex(t_pipex *px)
 		ft_free_tab(px->env_paths);
 	if (px->cmd_paths)
 		ft_free_tab(px->cmd_paths);
-	if (px->child)
-		free(px->child);
 	free(px);
 }
 
