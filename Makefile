@@ -3,18 +3,18 @@ SRC_DIR		= srcs
 OBJ_DIR		= objs
 SRC_DIR_B		= srcs_b
 OBJ_DIR_B		= objs_b
-SRC_NAME	= pipex.c errors.c
-SRC_NAME_BONUS = pipex_bonus.c errors.c
+SRC_NAME	= pipex.c errors.c childs.c parsing.c pipex_utils.c pipex_utils.c
 INCS_PIPEX = pipex.h pipex_bonus.h errors.h
+INCS_PIPEX_BONUS = pipex_bonus.h errors_bonus.h
 ##### BONUS #####
 
 OBJ_NAME		=	$(SRC_NAME:%.c=%.o)
-OBJ_NAME_B		=	$(SRC_NAME_BONUS:%.c=%.o)
+OBJ_NAME_B		=	$(SRC_NAME:%.c=%.o)
 
 SRC = $(addprefix $(SRC_DIR)/,$(SRC_NAME))
 OBJ = $(addprefix $(OBJ_DIR)/,$(OBJ_NAME))
-SRC_B = $(addprefix $(SRC_DIR_B)/,$(SRC_NAME_B))
-OBJ_B = $(addprefix $(OBJ_DIR_B)/,$(OBJ_NAME_B))
+SRC_B = $(addprefix $(SRC_DIR_B)/,$(SRC_NAME))
+OBJ_B = $(addprefix $(OBJ_DIR_B)/,$(OBJ_NAME))
 
 ####Compil####
 

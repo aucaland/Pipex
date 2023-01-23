@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/20 10:39:15 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/23 10:26:24 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
-
-void	clean_px(t_pipex *px)
-{
-	px->cmd = NULL;
-	px->cmd_args = NULL;
-	px->env = NULL;
-	px->env_paths = NULL;
-	px->cmd_paths = NULL;
-}
+#include "../pipex.h"
 
 void	ft_exit_pipex(t_pipex *px, char *err, char *location)
 {
@@ -36,7 +27,7 @@ void	ft_exit_pipex(t_pipex *px, char *err, char *location)
 	exit(EXIT_FAILURE);
 }
 
-void ft_free_pipex(t_pipex *px)
+void	ft_free_pipex(t_pipex *px)
 {
 	if (px->cmd)
 		ft_free_tab(px->cmd);
@@ -52,4 +43,3 @@ void ft_free_pipex(t_pipex *px)
 		ft_free_tab(px->cmd_paths);
 	free(px);
 }
-

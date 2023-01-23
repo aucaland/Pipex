@@ -9,34 +9,31 @@
 #include <errno.h>
 #include "errors.h"
 
-//typedef struct s_child
-//{
-//	pid_t pid;
-//
-//}						t_child;
-
 typedef struct s_pipex
 {
-	int infile;
-	int outfile;
-	char **cmd;
-	char ***cmd_args;
-	char **env;
-	char **env_paths;
-	char **cmd_paths;
-	int nb_cmd;
-//	int nb_pipes;
-//	t_child *child;
-	int (pipes_fd)[2];
-	int pid;
+	int		infile;
+	int		outfile;
+	char	**cmd;
+	char	***cmd_args;
+	char	**env;
+	char	**env_paths;
+	char	**cmd_paths;
+	int		nb_cmd;
+	int		(pipes_fd)[2];
+	int		pid;
 
 }				t_pipex;
 
-void	ft_exit_pipex(t_pipex *px, char *err, char *location);
-void	ft_free_pipex(t_pipex *px);
-void	clean_px(t_pipex *px);
+void		ft_exit_pipex(t_pipex *px, char *err, char *location);
+void		ft_free_pipex(t_pipex *px);
+void		clean_px(t_pipex *px);
+void		do_in_child(t_pipex *px, int nbr);
+void		make_child(t_pipex *px, int nbr);
+void		check_and_dup_infile(t_pipex *px, int *i);
 
-
-
-
-#endif //PIPEX_PIPEX_H
+void		get_full_path(t_pipex *px, char *env_full_path);
+void		get_cmd_paths(t_pipex *px);
+void		get_cmds(t_pipex *px, char **args);
+void		get_files(t_pipex *px, char **argv, int argc);
+void		get_cmds_args(t_pipex *px, char **args);
+#endif
