@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/23 10:31:56 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/23 23:22:25 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,17 @@ void	get_full_path(t_pipex *px, char *env_full_path)
 		{
 			env_full_path = ft_substr(*tmp, 5, ft_strlen(*tmp));
 			if (!env_full_path)
-				ft_exit_pipex(px, MALLOC, "get_full_path");
+				exit_pipex(px, MALLOC, "get_full_path");
 		}
 		tmp++;
 	}
 	tmp = ft_split(env_full_path, ':');
 	free(env_full_path);
 	if (!tmp)
-		ft_exit_pipex(px, MALLOC, "get_full_path");
+		exit_pipex(px, MALLOC, "get_full_path");
 	px->env_paths = ft_calloc(sizeof(char *), ft_strlen_tab(tmp) + 1);
 	if (!px->env_paths)
-		ft_exit_pipex(px, MALLOC, "get full path");
+		exit_pipex(px, MALLOC, "get full path");
 	while (tmp[++i])
 		px->env_paths[i] = ft_strjoin(tmp[i], "/");
 	ft_free_tab(tmp);
@@ -78,10 +78,10 @@ void	get_cmds(t_pipex *px, char **args)
 	i = -1;
 	px->cmd = ft_calloc(sizeof(char *), px->nb_cmd + 1);
 	if (!px->cmd)
-		ft_exit_pipex(px, MALLOC, "get_cmds");
+		exit_pipex(px, MALLOC, "get_cmds");
 	px->cmd_paths = ft_calloc(sizeof(char *), px->nb_cmd + 1);
 	if (!px->cmd_paths)
-		ft_exit_pipex(px, MALLOC, "get_cmds");
+		exit_pipex(px, MALLOC, "get_cmds");
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
@@ -92,23 +92,26 @@ void	get_cmds(t_pipex *px, char **args)
 		}
 		split_cmd = ft_split(args[i], ' ');
 		if (!split_cmd[0])
-			ft_exit_pipex(px, MALLOC, "get_cmds");
+			exit_pipex(px, MALLOC, "get_cmds");
 		px->cmd[i] = ft_strdup(split_cmd[0]);
 		if (!px->cmd[i])
-			ft_exit_pipex(px, MALLOC, "");
+			exit_pipex(px, MALLOC, "");
 		ft_free_tab(split_cmd);
 	}
 }
 
 void	get_files(t_pipex *px, char **argv, int argc)
 {
-	px->infile = open(argv[1], O_RDONLY);
-	if (px->infile == -1)
+	if (px->here_doc == 0)
 	{
-		ft_putstr_fd("bash: ", 2);
-		ft_putstr_fd(argv[1], 2);
-		ft_putstr_fd(": ", 2);
-		perror("");
+		px->infile = open(argv[1], O_RDONLY);
+		if (px->infile == -1)
+		{
+			ft_putstr_fd("bash: ", 2);
+			ft_putstr_fd(argv[1], 2);
+			ft_putstr_fd(": ", 2);
+			perror("");
+		}
 	}
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 	if (px->outfile == -1)
@@ -127,11 +130,11 @@ void	get_cmds_args(t_pipex *px, char **args)
 	i = -1;
 	px->cmd_args = malloc(sizeof(char **) * px->nb_cmd);
 	if (!px->cmd_args)
-		ft_exit_pipex(px, MALLOC, "get_cmds_args");
+		exit_pipex(px, MALLOC, "get_cmds_args");
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_args[i] = ft_split(args[i], ' ');
 		if (!px->cmd_args[i])
-			ft_exit_pipex(px, MALLOC, "get_cmds_args");
+			exit_pipex(px, MALLOC, "get_cmds_args");
 	}
 }

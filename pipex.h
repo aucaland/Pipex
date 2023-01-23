@@ -9,6 +9,7 @@
 #include <errno.h>
 #include "errors.h"
 
+#define HERE_DOC "here_doc"
 typedef struct s_pipex
 {
 	int		infile;
@@ -19,12 +20,13 @@ typedef struct s_pipex
 	char	**env_paths;
 	char	**cmd_paths;
 	int		nb_cmd;
-	int		(pipes_fd)[2];
+	int		pipes_fd[2];
 	int		pid;
-
+	int		here_doc;
+	char	*limiter;
 }				t_pipex;
 
-void		ft_exit_pipex(t_pipex *px, char *err, char *location);
+void		exit_pipex(t_pipex *px, char *err, char *location);
 void		ft_free_pipex(t_pipex *px);
 void		clean_px(t_pipex *px);
 void		do_in_child(t_pipex *px, int nbr);

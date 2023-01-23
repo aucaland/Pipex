@@ -18,7 +18,7 @@ void	do_in_child(t_pipex *px, int nbr)
 	if (nbr + 1 < px->nb_cmd)
 	{
 		if (dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
-			ft_exit_pipex(px, PERROR, "do_in_child");
+			exit_pipex(px, PERROR, "do_in_child");
 		close(px->pipes_fd[1]);
 	}
 	else
@@ -42,7 +42,7 @@ void	make_child(t_pipex *px, int nbr)
 		if (px->pipes_fd[0] != -1 && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
 		{
 			close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
-			ft_exit_pipex(px, PERROR, "make_child");
+			exit_pipex(px, PERROR, "make_child");
 		}
 		close(px->pipes_fd[0]);
 	}
@@ -50,7 +50,7 @@ void	make_child(t_pipex *px, int nbr)
 		exit(1);
 	px->pid = fork();
 	if (px->pid == -1)
-		ft_exit_pipex(px, PERROR, "make_child");
+		exit_pipex(px, PERROR, "make_child");
 	if (px->pid)
 		return ;
 	if (!px->pid)

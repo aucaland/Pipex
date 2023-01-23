@@ -12,7 +12,7 @@
 
 #include "../pipex.h"
 
-void	ft_exit_pipex(t_pipex *px, char *err, char *location)
+void	exit_pipex(t_pipex *px, char *err, char *location)
 {
 	if (ft_strncmp(err, PERROR, 6))
 	{

@@ -33,7 +33,7 @@ void	check_and_dup_infile(t_pipex *px, int *i)
 	else
 	{
 		if (dup2(px->infile, STDIN_FILENO) == -1)
-			ft_exit_pipex(px, PERROR, "main");
+			exit_pipex(px, PERROR, "main");
 		close(px->infile);
 	}
 }

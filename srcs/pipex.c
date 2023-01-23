@@ -3,25 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/23 10:46:30 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/24 00:20:14 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
+
+int check_here_doc(t_pipex **px, char **argv)
+{
+	char	*here_doc;
+
+	here_doc = HERE_DOC;
+	*px = malloc(sizeof(t_pipex));
+	if (!*px)
+		exit_pipex(*px, MALLOC, "init_struct_values");
+	if (ft_strlen(argv[1]) == 8 && ft_strncmp(argv[1], here_doc, 8) == 0)
+	{
+		(*px)->here_doc = 1;
+		(*px)->limiter = argv[2];
+		return (1);
+	}
+	(*px)->here_doc = 0;
+	return (0);
+}
+
+t_pipex *here_doc(t_pipex **px, int argc, char **argv, char **envp)
+{
+	char	*buf;
+
+	(void)envp;
+	(void)argv;
+	(void)argc;
+	(void)buf;
+	(*px)->infile = open(".here_doc.txt", O_TRUNC | O_CREAT | O_WRONLY, 0644);
+	if ((*px)->infile == -1)
+		exit_pipex(*px, "HERE_DOC FAILED", "in function here_doc");
+	while (1)
+	{
+		write(STDOUT_FILENO, ">", 1);
+
+		//write((*px)->infile, get_next)
+	}
+	exit(1);
+	return (*px);
+}
 
 t_pipex	*init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
 	char	**args;
 	char	*env_full_path;
 
-	args = argv + 2;
+	args = argv + 2 + (*px)->here_doc;
 	env_full_path = NULL;
-	*px = malloc(sizeof(t_pipex));
 	if (!*px)
-		ft_exit_pipex(*px, MALLOC, "init_struct_values");
+		*px = malloc(sizeof(t_pipex));
+	if (!*px)
+		exit_pipex(*px, MALLOC, "init_struct_values");
 	clean_px(*px);
 	(*px)->nb_cmd = argc - 3;
 	(*px)->env = envp;
@@ -40,9 +80,12 @@ int	main(int argc, char **argv, char **envp)
 
 	i = -1;
 	px = NULL;
-	if (argc < 5 || !envp)
-		ft_exit_pipex(NULL, ARGC, "");
-	px = init_struct_values(&px, argc, argv, envp);
+	if (argc <= 5 || !envp)
+		exit_pipex(NULL, ARGC, "");
+	if (argc == 6 && check_here_doc(&px, argv) > 0)
+		here_doc(&px, argc, argv, envp);
+	else
+		px = init_struct_values(&px, argc, argv, envp);
 	check_and_dup_infile(px, &i);
 	while (++i < px->nb_cmd)
 	{
