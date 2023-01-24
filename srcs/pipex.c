@@ -6,14 +6,14 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/24 21:13:30 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/24 21:46:56 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
 #define PROMPT_HERE_DOC "> "
 
-int check_here_doc(t_pipex **px, char **argv)
+int	check_here_doc(t_pipex **px, char **argv)
 {
 	char	*here_doc;
 
@@ -90,7 +90,7 @@ int	main(int argc, char **argv, char **envp)
 	px = NULL;
 	if (argc < 5 || !envp)
 		exit(1);
-	if (argc == 6 && check_here_doc(&px, argv) > 0)
+	if (check_here_doc(&px, argv) > 0)
 		px = here_doc(&px, argc, argv, envp);
 	else
 		px = init_struct_values(&px, argc, argv, envp);
