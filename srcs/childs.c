@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/24 20:48:05 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/24 21:53:44 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	do_in_child(t_pipex *px, int nbr)
 		close(px->outfile);
 		close(px->pipes_fd[1]);
 	}
+	dprintf(2, "PATH = %s\n", px->cmd_paths[nbr]);
 	execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
 	ft_putstr_fd("bash: ", 2);
 	ft_putstr_fd(px->cmd_args[nbr][0], 2);
