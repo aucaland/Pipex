@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/23 23:22:25 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/24 21:05:39 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,15 +103,15 @@ void	get_cmds(t_pipex *px, char **args)
 void	get_files(t_pipex *px, char **argv, int argc)
 {
 	if (px->here_doc == 0)
-	{
 		px->infile = open(argv[1], O_RDONLY);
-		if (px->infile == -1)
-		{
-			ft_putstr_fd("bash: ", 2);
-			ft_putstr_fd(argv[1], 2);
-			ft_putstr_fd(": ", 2);
-			perror("");
-		}
+	else
+		px->infile = open(".here_doc.txt", O_RDONLY);
+	if (px->infile == -1)
+	{
+		ft_putstr_fd("bash: ", 2);
+		ft_putstr_fd(argv[1], 2);
+		ft_putstr_fd(": ", 2);
+		perror("");
 	}
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 	if (px->outfile == -1)

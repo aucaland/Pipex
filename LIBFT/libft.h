@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:19:32 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/17 14:49:18 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/24 19:51:47 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,7 @@ char				**ft_free_tab(char **tab);
 int					ft_isspace(char str);
 size_t				ft_strlen_tab(char **s);
 void				close_fds(int count, ...);
+int					ft_strcmp(const char *first, const char *second);
 
 //convert_base(piscine) //
 

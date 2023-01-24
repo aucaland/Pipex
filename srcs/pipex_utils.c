@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:38:45 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/23 10:45:13 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:43:55 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	check_and_dup_infile(t_pipex *px, int *i)
 	if (px->infile == -1)
 	{
 		if (pipe(px->pipes_fd) == -1)
-			ft_free_pipex(px);
+			exit_pipex(px, PIPE, "check_and_dup_infile");
 		close(px->pipes_fd[1]);
-		i++;
+		*i += 1;
 	}
 	else
 	{

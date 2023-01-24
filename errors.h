@@ -8,4 +8,5 @@
 #define MISSING_CMD "Command  in function : "
 #define PERROR "PERROR"
 #define DUP2	"Duplicate with dup2 function failed"
+#define PIPE		"PIPE FAILED"
 #endif //ERRORS_H

@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/23 10:25:19 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/24 20:48:05 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ void	make_child(t_pipex *px, int nbr)
 		if (px->pipes_fd[0] != -1 && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
 		{
 			close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
-			exit_pipex(px, PERROR, "make_child");
+			exit_pipex(px, DUP2, "make_child");
 		}
 		close(px->pipes_fd[0]);
 	}
 	if (nbr < px->nb_cmd - 1 && pipe(px->pipes_fd) == -1)
-		exit_pipex(px, DUP2, "make_child");
+		exit_pipex(px, PIPE, "make_child");
 	px->pid = fork();
 	if (px->pid == -1)
 		exit_pipex(px, PERROR, "make_child");
