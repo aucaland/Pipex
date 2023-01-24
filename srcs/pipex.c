@@ -6,11 +6,12 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/24 00:20:14 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/24 11:16:37 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
+#define PROMPT_HERE_DOC ">"
 
 int check_here_doc(t_pipex **px, char **argv)
 {
@@ -43,7 +44,11 @@ t_pipex *here_doc(t_pipex **px, int argc, char **argv, char **envp)
 		exit_pipex(*px, "HERE_DOC FAILED", "in function here_doc");
 	while (1)
 	{
-		write(STDOUT_FILENO, ">", 1);
+		if (write(STDIN_FILENO, PROMPT_HERE_DOC, ft_strlen(PROMPT_HERE_DOC)) == -1)
+			exit(1);
+		buf = get_next_line(STDIN_FILENO);
+		if (!buf || ft_strncmp(buf, (*px)->limiter, ft_strlen(buf)) == 0)
+			exit(1);
 
 		//write((*px)->infile, get_next)
 	}
