@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/24 11:16:37 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/24 11:20:51 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ t_pipex *here_doc(t_pipex **px, int argc, char **argv, char **envp)
 	(void)envp;
 	(void)argv;
 	(void)argc;
-	(void)buf;
 	(*px)->infile = open(".here_doc.txt", O_TRUNC | O_CREAT | O_WRONLY, 0644);
 	if ((*px)->infile == -1)
 		exit_pipex(*px, "HERE_DOC FAILED", "in function here_doc");

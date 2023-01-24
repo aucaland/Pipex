@@ -47,7 +47,7 @@ void	make_child(t_pipex *px, int nbr)
 		close(px->pipes_fd[0]);
 	}
 	if (nbr < px->nb_cmd - 1 && pipe(px->pipes_fd) == -1)
-		exit(1);
+		exit_pipex(px, DUP2, "make_child");
 	px->pid = fork();
 	if (px->pid == -1)
 		exit_pipex(px, PERROR, "make_child");
