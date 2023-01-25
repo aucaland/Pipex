@@ -1,0 +1,50 @@
+==13319== Memcheck, a memory error detector
+==13319== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==13319== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
+==13319== Command: ./pipex here_doc S cat cat ./srcs/file2.txt
+==13319== Parent PID: 12008
+==13319== 
+==13319== 
+==13319== Process terminating with default action of signal 2 (SIGINT)
+==13319==    at 0x4CFD1E1: read (read.c:26)
+==13319==    by 0x402956: get_line_buf (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x402A49: get_next_line (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x4014A6: here_doc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x401176: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319== 
+==13319== FILE DESCRIPTORS: 5 open (3 std) at exit.
+==13319== Open file descriptor 4: .here_doc.txt
+==13319==    at 0x4CFCF35: open (open64.c:41)
+==13319==    by 0x40148C: here_doc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x401176: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319== 
+==13319== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
+==13319==    <inherited from parent>
+==13319== 
+==13319== 
+==13319== HEAP SUMMARY:
+==13319==     in use at exit: 209 bytes in 2 blocks
+==13319==   total heap usage: 10 allocs, 8 frees, 479 bytes allocated
+==13319== 
+==13319== 80 bytes in 1 blocks are still reachable in loss record 1 of 2
+==13319==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==13319==    by 0x401335: check_here_doc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x40115C: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319== 
+==13319== 129 bytes in 1 blocks are still reachable in loss record 2 of 2
+==13319==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==13319==    by 0x402B99: ft_calloc_gnl (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x402921: get_line_buf (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x402A49: get_next_line (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x4014A6: here_doc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319==    by 0x401176: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==13319== 
+==13319== LEAK SUMMARY:
+==13319==    definitely lost: 0 bytes in 0 blocks
+==13319==    indirectly lost: 0 bytes in 0 blocks
+==13319==      possibly lost: 0 bytes in 0 blocks
+==13319==    still reachable: 209 bytes in 2 blocks
+==13319==         suppressed: 0 bytes in 0 blocks
+==13319== 
+==13319== For lists of detected and suppressed errors, rerun with: -s
+==13319== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

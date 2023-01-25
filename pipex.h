@@ -26,8 +26,8 @@ typedef struct s_pipex
 	char	*limiter;
 }				t_pipex;
 
-void		exit_pipex(t_pipex *px, char *err, char *location);
-void		ft_free_pipex(t_pipex *px);
+void		exit_pipex(t_pipex *px, char *err, char *location, int cleaned);
+void		free_pipex(t_pipex *px, int cleaned);
 void		clean_px(t_pipex *px);
 void		do_in_child(t_pipex *px, int nbr);
 void		make_child(t_pipex *px, int nbr);
