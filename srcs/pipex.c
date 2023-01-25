@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 11:53:07 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 12:07:42 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int	main(int argc, char **argv, char **envp)
 
 	i = -1;
 	px = NULL;
-	if (argc < 5 || !envp)
+	if (argc < 5 || !*envp)
 		exit(1);
 	if (check_here_doc(&px, argv) > 0)
 		here_doc(&px, argc, argv, envp);
