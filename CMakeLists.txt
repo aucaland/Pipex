@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 include_directories(LIBFT)
 include_directories(objs)
-include_directories(srcs)
+include_directories(srcs_b)
 
 add_executable(Pipex
         LIBFT/objs/ft_atoi.o
@@ -123,6 +123,6 @@ add_executable(Pipex
         LIBFT/libft.h
         LIBFT/Makefile
         objs/test.o
-        srcs/pipex.c
+        srcs_b/pipex_bonus.c
         Makefile
-        pipex.h srcs/childs.c pipex_bonus.h srcs/pipex.c srcs/pipex.c srcs/pipex.c)
+        h_files/pipex.h srcs_b/childs_bonus.c srcs_b/pipex_bonus.c srcs_b/pipex_bonus.c srcs_b/pipex_bonus.c)

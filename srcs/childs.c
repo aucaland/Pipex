@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../h_files/pipex.h"
 
 void	do_in_child(t_pipex *px, int nbr)
 {

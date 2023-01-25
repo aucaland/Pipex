@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 12:43:01 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 16:04:57 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../h_files/pipex.h"
 
 void	get_full_path(t_pipex *px)
 {
@@ -95,10 +95,7 @@ void	get_cmds(t_pipex *px, char **args)
 
 void	get_files(t_pipex *px, char **argv, int argc)
 {
-	if (px->here_doc == 0)
-		px->infile = open(argv[1], O_RDONLY);
-	else
-		px->infile = open(".here_doc.txt", O_RDONLY);
+	px->infile = open(argv[1], O_RDONLY);
 	if (px->infile == -1)
 	{
 		ft_putstr_fd("bash: ", 2);

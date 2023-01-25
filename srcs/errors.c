@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 11:28:21 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 16:04:57 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../h_files/pipex.h"
 
 void	exit_pipex(t_pipex *px, char *err, char *location, int cleaned)
 {
@@ -32,8 +32,6 @@ void	exit_pipex(t_pipex *px, char *err, char *location, int cleaned)
 
 void	free_pipex(t_pipex *px, int cleaned)
 {
-	if (access(".here_doc.txt", F_OK) == 0)
-		unlink(".here_doc.txt");
 	if (!cleaned)
 	{
 		free(px);

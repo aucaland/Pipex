@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
+#include "../h_files/pipex.h"
 
 void	get_full_path(t_pipex *px)
 {

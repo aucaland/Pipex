@@ -3,33 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 12:08:07 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 16:12:18 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pipex.h"
-#define PROMPT_HDOC "> "
-
-int	check_here_doc(t_pipex **px, char **argv)
-{
-	char	*here_doc;
-
-	here_doc = HERE_DOC;
-	*px = malloc(sizeof(t_pipex));
-	if (!*px)
-		exit_pipex(*px, MALLOC, "init_struct_values", 0);
-	if (ft_strlen(argv[1]) == 8 && ft_strncmp(argv[1], here_doc, 8) == 0)
-	{
-		(*px)->here_doc = 1;
-		(*px)->limiter = argv[2];
-		return (1);
-	}
-	(*px)->here_doc = 0;
-	return (0);
-}
+#include "../h_files/pipex.h"
 
 void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
@@ -39,45 +20,15 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 		*px = malloc(sizeof(t_pipex));
 	if (!*px)
 		exit_pipex(*px, MALLOC, "init_struct_values", 0);
-	if (!(*px)->here_doc)
-		(*px)->here_doc = 0;
-	args = argv + 2 + (*px)->here_doc;
+	args = argv + 2;
 	clean_px(*px);
-	(*px)->nb_cmd = argc - 3 - (*px)->here_doc / 1;
+	(*px)->nb_cmd = argc - 3;
 	(*px)->env = envp;
 	get_cmds((*px), args);
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
 	get_full_path(*px);
 	get_cmd_paths((*px));
-}
-
-void	here_doc(t_pipex **px, int argc, char **argv, char **envp)
-{
-	char	*buf;
-
-	(*px)->infile = open(".here_doc.txt", O_TRUNC | O_CREAT | O_WRONLY, 0644);
-	if ((*px)->infile == -1)
-		exit_pipex(*px, "HERE_DOC FAILED", "in function here_doc", 0);
-	while (1)
-	{
-		if (write(STDIN_FILENO, PROMPT_HDOC, ft_strlen(PROMPT_HDOC)) == -1)
-			exit_pipex(*px, "", "", 0);
-		buf = get_next_line(STDIN_FILENO);
-		if (!buf || ft_strcmp(buf, (*px)->limiter) == 0)
-		{
-			if (!buf)
-				write(STDIN_FILENO, "\n", 1);
-			close((*px)->infile);
-			break ;
-		}
-		write((*px)->infile, buf, ft_strlen(buf));
-		write((*px)->infile, "\n", 1);
-		free(buf);
-	}
-	free(buf);
-	close((*px)->infile);
-	init_struct_values(px, argc, argv, envp);
 }
 
 int	main(int argc, char **argv, char **envp)
@@ -87,12 +38,12 @@ int	main(int argc, char **argv, char **envp)
 
 	i = -1;
 	px = NULL;
-	if (argc < 5 || !*envp)
+	if (argc != 5 || !*envp)
+	{
+		ft_putstr_fd(ARGC, 2);
 		exit(1);
-	if (check_here_doc(&px, argv) > 0)
-		here_doc(&px, argc, argv, envp);
-	else
-		init_struct_values(&px, argc, argv, envp);
+	}
+	init_struct_values(&px, argc, argv, envp);
 	check_and_dup_infile(px, &i);
 	while (++i < px->nb_cmd)
 	{

@@ -1,15 +1,16 @@
-#ifndef PIPEX_H
-#define PIPEX_H
+#ifndef PIPEX_BONUS_H
+#define PIPEX_BONUS_H
 
-#include "LIBFT/libft.h"
+#include "../LIBFT/libft.h"
 #include <sys/wait.h>
 #include <string.h>
 #include <unistd.h>
 #include <stdio.h> //TODO : erase
 #include <errno.h>
-#include "errors.h"
+#include "errors_bonus.h"
 
 #define HERE_DOC "here_doc"
+
 typedef struct s_pipex
 {
 	int		infile;
@@ -39,4 +40,5 @@ void		get_cmd_paths(t_pipex *px);
 void		get_cmds(t_pipex *px, char **args);
 void		get_files(t_pipex *px, char **argv, int argc);
 void		get_cmds_args(t_pipex *px, char **args);
+
 #endif
