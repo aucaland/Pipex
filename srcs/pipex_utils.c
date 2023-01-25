@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:38:45 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 11:18:26 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 12:45:33 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,20 @@ void	check_and_dup_infile(t_pipex *px, int *i)
 			exit_pipex(px, PERROR, "main", 1);
 		close(px->infile);
 	}
+}
+
+int path_exist(t_pipex *px, char **tmp, char **env_full_path)
+{
+	while (*tmp)
+	{
+		if (ft_strlen(*tmp) > 4 && ft_strncmp("PATH", *tmp, 4) == 0)
+		{
+			*env_full_path = ft_substr(*tmp, 5, ft_strlen(*tmp));
+			if (!*env_full_path)
+				exit_pipex(px, MALLOC, "get_full_path", 1);
+			return (1);
+		}
+		tmp++;
+	}
+	return (0);
 }

@@ -6,29 +6,22 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 12:04:40 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 12:43:01 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../pipex.h"
 
-void	get_full_path(t_pipex *px, char *env_full_path)
+void	get_full_path(t_pipex *px)
 {
 	char	**tmp;
+	char	*env_full_path;
 	int		i;
 
 	i = -1;
 	tmp = px->env;
-	while (tmp && !env_full_path)
-	{
-		if (ft_strncmp("PATH", *tmp, 4) == 0)
-		{
-			env_full_path = ft_substr(*tmp, 5, ft_strlen(*tmp));
-			if (!env_full_path)
-				exit_pipex(px, MALLOC, "get_full_path", 1);
-		}
-		tmp++;
-	}
+	if (!path_exist(px, tmp, &env_full_path))
+		exit_pipex(px, "", "", 1);
 	tmp = ft_split(env_full_path, ':');
 	free(env_full_path);
 	if (!tmp)

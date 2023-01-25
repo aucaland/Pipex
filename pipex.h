@@ -33,7 +33,8 @@ void		do_in_child(t_pipex *px, int nbr);
 void		make_child(t_pipex *px, int nbr);
 void		check_and_dup_infile(t_pipex *px, int *i);
 
-void		get_full_path(t_pipex *px, char *env_full_path);
+void		get_full_path(t_pipex *px);
+int			path_exist(t_pipex *px, char **tmp, char **env_full_path);
 void		get_cmd_paths(t_pipex *px);
 void		get_cmds(t_pipex *px, char **args);
 void		get_files(t_pipex *px, char **argv, int argc);

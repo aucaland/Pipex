@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 12:07:42 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/25 12:08:07 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	check_here_doc(t_pipex **px, char **argv)
 void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
 	char	**args;
-	char	*env_full_path;
 
 	if (!*px)
 		*px = malloc(sizeof(t_pipex));
@@ -43,14 +42,13 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	if (!(*px)->here_doc)
 		(*px)->here_doc = 0;
 	args = argv + 2 + (*px)->here_doc;
-	env_full_path = NULL;
 	clean_px(*px);
 	(*px)->nb_cmd = argc - 3 - (*px)->here_doc / 1;
 	(*px)->env = envp;
 	get_cmds((*px), args);
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
-	get_full_path(*px, env_full_path);
+	get_full_path(*px);
 	get_cmd_paths((*px));
 }
 
