@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 16:04:57 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:12:18 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,6 @@ void	get_cmds(t_pipex *px, char **args)
 	int		i;
 
 	i = -1;
-	px->cmd = ft_calloc(sizeof(char *), px->nb_cmd + 1);
-	if (!px->cmd)
-		exit_pipex(px, MALLOC, "get_cmds", 1);
-	px->cmd_paths = ft_calloc(sizeof(char *), px->nb_cmd + 1);
-	if (!px->cmd_paths)
-		exit_pipex(px, MALLOC, "get_cmds", 1);
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;

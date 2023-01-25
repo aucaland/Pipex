@@ -16,8 +16,10 @@ OBJ_NAME_B		=	$(SRC_NAME_BONUS:%.c=%.o)
 
 SRC 				= $(addprefix $(SRC_DIR)/,$(SRC_NAME))
 OBJ 				= $(addprefix $(OBJ_DIR)/,$(OBJ_NAME))
+
 SRC_B 				= $(addprefix $(SRC_DIR_B)/,$(SRC_NAME_BONUS))
 OBJ_B 				= $(addprefix $(OBJ_DIR_B)/,$(OBJ_NAME_B))
+
 INCS_PIPEX			= $(addprefix $(H_DIR)/,$(INCS_NAME))
 INCS_PIPEX_BONUS	= $(addprefix $(H_DIR_B)/,$(INCS_NAME_BONUS))
 
@@ -63,10 +65,10 @@ $(OBJ_DIR_B)/%.o:	$(SRC_DIR_B)/%.c $(INCS_PIPEX_BONUS)
 	@$(CC) $(CFLAGS) $(CH_FLAG_BONUS) -o $@ -c $<
 	@echo "-\033[1;92mCompiling : \033[0m $?"
 
-bonus: $(OBJ_B)
+bonus:		$(OBJ_B)
 	@echo "Making LIBFT"
 	@make all -C LIBFT
-	@$(CC) $^ -o $(NAME) $(CFLAGS) $(CH_FLAG_BONUS) -L./LIBFT -lft
+	@$(CC) $^ -o  $(NAME) $(CFLAGS) $(CH_FLAG_BONUS) -L./LIBFT -lft
 	@echo  "-\033[1;35mEdit/Create: \033[0m $?                    \033[0;32m[OK]\033[0m"
 	@$(MODE)
 

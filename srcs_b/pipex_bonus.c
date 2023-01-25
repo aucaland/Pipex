@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.c                                            :+:      :+:    :+:   */
+/*   pipex_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 15:45:41 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/25 18:27:59 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	args = argv + 2 + (*px)->here_doc;
 	clean_px(*px);
 	(*px)->nb_cmd = argc - 3 - (*px)->here_doc / 1;
+	(*px)->cmd = ft_calloc(sizeof(char *), (*px)->nb_cmd + 1);
+	if (!(*px)->cmd)
+		exit_pipex(*px, MALLOC, "get_cmds", 1);
+	(*px)->cmd_paths = ft_calloc(sizeof(char *), (*px)->nb_cmd + 1);
+	if (!(*px)->cmd_paths)
+		exit_pipex(*px, MALLOC, "get_cmds", 1);
 	(*px)->env = envp;
 	get_cmds((*px), args);
 	get_cmds_args((*px), args);
