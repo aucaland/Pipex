@@ -1,13 +1,25 @@
-#ifndef PIPEX_H
-#define PIPEX_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/25 19:48:22 by aucaland          #+#    #+#             */
+/*   Updated: 2023/01/25 19:48:38 by aucaland         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "../LIBFT/libft.h"
-#include <sys/wait.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h> //TODO : erase
-#include <errno.h>
-#include "errors.h"
+#ifndef PIPEX_H
+# define PIPEX_H
+
+# include "../LIBFT/libft.h"
+# include <sys/wait.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <errno.h>
+# include "errors.h"
 
 typedef struct s_pipex
 {

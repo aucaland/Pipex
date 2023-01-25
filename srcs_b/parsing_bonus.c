@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 16:01:27 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/25 21:16:23 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@ void	get_full_path(t_pipex *px)
 	i = -1;
 	tmp = px->env;
 	if (!path_exist(px, tmp, &env_full_path))
-		exit_pipex(px, "", "", 1);
+	{
+		ft_putstr_fd("Don't touch my env", 2);
+		dprintf(2, "%s", px->env_paths[0]);
+		return ;
+//		exit_pipex(px, "", "", 1);
+	}
 	tmp = ft_split(env_full_path, ':');
 	free(env_full_path);
 	if (!tmp)
@@ -100,7 +105,10 @@ void	get_files(t_pipex *px, char **argv, int argc)
 		ft_putstr_fd(": ", 2);
 		perror("");
 	}
-	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
+	if (px->here_doc == 0)
+		px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
+	else
+		px->outfile = open(argv[argc - 1], O_APPEND | O_WRONLY | O_CREAT, 0644);
 	if (px->outfile == -1)
 	{
 		ft_putstr_fd("bash: ", 2);

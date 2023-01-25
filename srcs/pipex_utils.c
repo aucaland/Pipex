@@ -38,7 +38,7 @@ void	check_and_dup_infile(t_pipex *px, int *i)
 	}
 }
 
-int path_exist(t_pipex *px, char **tmp, char **env_full_path)
+int	path_exist(t_pipex *px, char **tmp, char **env_full_path)
 {
 	while (*tmp)
 	{

@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex_bonus.h                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/25 19:49:03 by aucaland          #+#    #+#             */
+/*   Updated: 2023/01/25 19:49:40 by aucaland         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PIPEX_BONUS_H
-#define PIPEX_BONUS_H
+# define PIPEX_BONUS_H
 
-#include "../LIBFT/libft.h"
-#include <sys/wait.h>
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h> //TODO : erase
-#include <errno.h>
-#include "errors_bonus.h"
+# include "../LIBFT/libft.h"
+# include <sys/wait.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <errno.h>
+# include "errors_bonus.h"
 
-#define HERE_DOC "here_doc"
+# define HERE_DOC "here_doc"
 
 typedef struct s_pipex
 {

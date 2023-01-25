@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex_utils.c                                      :+:      :+:    :+:   */
+/*   pipex_utils_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:38:45 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 15:45:41 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/25 21:15:17 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	check_and_dup_infile(t_pipex *px, int *i)
 	}
 }
 
-int path_exist(t_pipex *px, char **tmp, char **env_full_path)
+int	path_exist(t_pipex *px, char **tmp, char **env_full_path)
 {
 	while (*tmp)
 	{
@@ -51,5 +51,11 @@ int path_exist(t_pipex *px, char **tmp, char **env_full_path)
 		}
 		tmp++;
 	}
+	px->env_paths = ft_calloc(sizeof(char *), 1);
+	if (!px->env_paths)
+		exit_pipex(px, MALLOC, "get full path", 2);
+	px->env_paths[0] = malloc(sizeof(char) * 1);
+	px->env_paths[0] = "/";
+	px->env_paths[1] = "\0";
 	return (0);
 }

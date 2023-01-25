@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 18:27:59 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/25 21:20:59 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,8 @@ int	main(int argc, char **argv, char **envp)
 
 	i = -1;
 	px = NULL;
-	if (argc < 5 || !*envp)
-		exit(1);
+	if (argc < 5)
+		exit_pipex(px, ARGC, "main", 0);
 	if (check_here_doc(&px, argv) > 0)
 		here_doc(&px, argc, argv, envp);
 	else
