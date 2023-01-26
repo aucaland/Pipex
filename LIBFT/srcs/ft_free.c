@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 12:17:33 by aurel             #+#    #+#             */
-/*   Updated: 2022/12/03 12:31:09 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/26 19:22:03 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_free(void *ptr)
 {
-	free(ptr);
-	ptr = NULL;
+	if (ptr)
+	{
+		free(ptr);
+		ptr = NULL;
+	}
 }

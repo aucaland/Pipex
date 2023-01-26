@@ -94,7 +94,7 @@ int	main(int argc, char **argv, char **envp)
 	i = -1;
 	px = NULL;
 	if (argc < 5)
-		exit_pipex(px, ARGC, "main", 0);
+		exit_pipex(px, ARGC, "", 5);
 	if (check_here_doc(&px, argv) > 0)
 		here_doc(&px, argc, argv, envp);
 	else

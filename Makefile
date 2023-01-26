@@ -47,7 +47,7 @@ endif
 ## Rules ##
 
 all:		$(NAME)
-
+NAME_B = pipex_bonus
 $(NAME):	$(OBJ)
 	@echo "Making LIBFT"
 	@make all -C LIBFT
@@ -65,10 +65,15 @@ $(OBJ_DIR_B)/%.o:	$(SRC_DIR_B)/%.c $(INCS_PIPEX_BONUS)
 	@$(CC) $(CFLAGS) $(CH_FLAG_BONUS) -o $@ -c $<
 	@echo "-\033[1;92mCompiling : \033[0m $?"
 
-bonus:		$(OBJ_B)
+build_lib:
 	@echo "Making LIBFT"
 	@make all -C LIBFT
-	@$(CC) $^ -o  $(NAME) $(CFLAGS) $(CH_FLAG_BONUS) -L./LIBFT -lft
+
+bonus :	build_lib
+	make $(NAME_B)
+
+$(NAME_B): $(OBJ_B)
+	@$(CC) $^ -o  $(NAME_B) $(CFLAGS) $(CH_FLAG_BONUS) -L./LIBFT -lft
 	@echo  "-\033[1;35mEdit/Create: \033[0m $?                    \033[0;32m[OK]\033[0m"
 	@$(MODE)
 

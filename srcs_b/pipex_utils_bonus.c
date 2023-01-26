@@ -56,6 +56,6 @@ int	path_exist(t_pipex *px, char **tmp, char **env_full_path)
 		exit_pipex(px, MALLOC, "get full path", 2);
 	px->env_paths[0] = malloc(sizeof(char) * 1);
 	px->env_paths[0] = "/";
-	px->env_paths[1] = "\0";
+	px->env_paths[1] = NULL;
 	return (0);
 }

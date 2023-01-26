@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 21:19:26 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/26 18:05:43 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char **argv, char **envp)
 	i = -1;
 	px = NULL;
 	if (argc != 5)
-		exit_pipex(px, ARGC, "main", -1);
+		exit_pipex(px, ARGC, "", 5);
 	init_struct_values(&px, argc, argv, envp);
 	check_and_dup_infile(px, &i);
 	while (++i < px->nb_cmd)

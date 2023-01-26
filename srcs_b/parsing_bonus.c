@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 21:16:23 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/26 19:30:55 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,7 @@ void	get_full_path(t_pipex *px)
 	i = -1;
 	tmp = px->env;
 	if (!path_exist(px, tmp, &env_full_path))
-	{
-		ft_putstr_fd("Don't touch my env", 2);
-		dprintf(2, "%s", px->env_paths[0]);
 		return ;
-//		exit_pipex(px, "", "", 1);
-	}
 	tmp = ft_split(env_full_path, ':');
 	free(env_full_path);
 	if (!tmp)
