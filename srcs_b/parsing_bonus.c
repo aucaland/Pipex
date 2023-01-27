@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/27 02:02:12 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/27 16:07:14 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,23 @@ void	get_full_path(t_pipex *px)
 
 	i = -1;
 	tmp = px->env;
-	if (!path_exist(px, tmp, &env_full_path))
+	if (!path_exist(px, &tmp, &env_full_path))
 		return ;
-	tmp = ft_split(env_full_path, ':');
-	free(env_full_path);
-	if (!tmp)
-		exit_pipex(px, MALLOC, "get_full_path", 1);
 	px->env_paths = ft_calloc(sizeof(char *), ft_strlen_tab(tmp) + 1);
 	if (!px->env_paths)
+	{
+		ft_free_tab(tmp);
 		exit_pipex(px, MALLOC, "get full path", 1);
+	}
 	while (tmp[++i])
+	{
 		px->env_paths[i] = ft_strjoin(tmp[i], "/");
+		if (!px->env_paths[i])
+		{
+			ft_free_tab(tmp);
+			exit_pipex(px, MALLOC, "get_full_path", 1);
+		}
+	}
 	ft_free_tab(tmp);
 }
 
@@ -45,22 +51,10 @@ void	get_cmd_paths(t_pipex *px)
 	{
 		i = -1;
 		while (++i < px->nb_cmd)
-		{
-			if (access(px->cmd[i], X_OK) == 0 && !px->cmd_paths[i])
-				px->cmd_paths[i] = ft_strdup(px->cmd[i]);
-			else if (!px->cmd_paths[i])
-			{
-				join_cmd = ft_strjoin(*tmp, px->cmd[i]);
-				if (!join_cmd && px->cmd[i])
-					exit(1);
-				if (access(join_cmd, X_OK) == 0)
-					px->cmd_paths[i] = join_cmd;
-				else
-					free(join_cmd);
-			}
-		}
+			get_path_if_access(px, &tmp, &join_cmd, i);
 		tmp++;
 	}
+	fix_null_path(px);
 }
 
 void	get_cmds(t_pipex *px, char **args)
@@ -78,11 +72,14 @@ void	get_cmds(t_pipex *px, char **args)
 			continue ;
 		}
 		split_cmd = ft_split(args[i], ' ');
-		if (!split_cmd[0])
+		if (!split_cmd)
 			exit_pipex(px, MALLOC, "get_cmds", 1);
 		px->cmd[i] = ft_strdup(split_cmd[0]);
 		if (!px->cmd[i])
+		{
+			ft_free_tab(split_cmd);
 			exit_pipex(px, MALLOC, "", 1);
+		}
 		ft_free_tab(split_cmd);
 	}
 }

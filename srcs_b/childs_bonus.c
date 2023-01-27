@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   childs.c                                           :+:      :+:    :+:   */
+/*   childs_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 15:45:41 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/27 16:47:53 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,14 @@ void	do_in_child(t_pipex *px, int nbr)
 		close(px->outfile);
 		close(px->pipes_fd[1]);
 	}
-	execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
+	if (px->cmd[nbr][0] != '\0')
+		execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
+	else
+		exit(0);
 	ft_putstr_fd("bash: ", 2);
 	ft_putstr_fd(px->cmd_args[nbr][0], 2);
 	ft_putendl_fd(": command not found", 2);
-	exit (1);
+	exit (0);
 }
 
 void	make_child(t_pipex *px, int nbr)

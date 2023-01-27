@@ -1,0 +1,32 @@
+==34882== Memcheck, a memory error detector
+==34882== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==34882== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
+==34882== Command: ./pipex file1.txt catsdf cat file2.txt
+==34882== Parent PID: 3792
+==34882== 
+==34882== 
+==34882== FILE DESCRIPTORS: 3 open (2 std) at exit.
+==34882== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
+==34882==    <inherited from parent>
+==34882== 
+==34882== 
+==34882== HEAP SUMMARY:
+==34882==     in use at exit: 13 bytes in 1 blocks
+==34882==   total heap usage: 40 allocs, 39 frees, 2,433 bytes allocated
+==34882== 
+==34882== 13 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==34882==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==34882==    by 0x4023AF: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==34882==    by 0x401B06: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==34882==    by 0x40138E: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==34882==    by 0x4013EF: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
+==34882== 
+==34882== LEAK SUMMARY:
+==34882==    definitely lost: 13 bytes in 1 blocks
+==34882==    indirectly lost: 0 bytes in 0 blocks
+==34882==      possibly lost: 0 bytes in 0 blocks
+==34882==    still reachable: 0 bytes in 0 blocks
+==34882==         suppressed: 0 bytes in 0 blocks
+==34882== 
+==34882== For lists of detected and suppressed errors, rerun with: -s
+==34882== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

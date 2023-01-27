@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/27 02:26:02 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/27 14:07:49 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,6 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
 	char	**args;
 
-	if (!*px)
-		*px = malloc(sizeof(t_pipex));
-	if (!*px)
-		exit_pipex(*px, MALLOC, "init_struct_values", 0);
 	if (!(*px)->here_doc)
 		(*px)->here_doc = 0;
 	args = argv + 2 + (*px)->here_doc;

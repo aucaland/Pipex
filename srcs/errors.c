@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/27 01:24:58 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/27 16:13:35 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,20 @@ void	exit_pipex(t_pipex *px, char *err, char *location, int cleaned)
 	if (px)
 		free_pipex(px, cleaned);
 	exit(EXIT_SUCCESS);
+}
+
+char	**ft_free_tab_pipex(char **tab, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
 }
 
 void	free_pipex(t_pipex *px, int cleaned)
