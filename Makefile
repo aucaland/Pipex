@@ -1,4 +1,5 @@
 NAME				= pipex
+NAME_B				= ./exec_bonus/pipex
 SRC_DIR				= srcs
 OBJ_DIR				= objs
 SRC_DIR_B			= srcs_b
@@ -47,7 +48,7 @@ endif
 ## Rules ##
 
 all:		$(NAME)
-NAME_B = pipex_bonus
+
 $(NAME):	$(OBJ)
 	@echo "Making LIBFT"
 	@make all -C LIBFT
@@ -70,6 +71,7 @@ build_lib:
 	@make all -C LIBFT
 
 bonus :	build_lib
+	@mkdir -p exec_bonus
 	make $(NAME_B)
 
 $(NAME_B): $(OBJ_B)
@@ -83,10 +85,10 @@ clean:
 	@echo  "-\033[1;33m Remove objs file  \033[0m  \".o\"         \033[0;32m [OK] \033[0m"
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm -rf $(NAME) $(NAME_B)
 	@make fclean -C LIBFT
 	@echo  "-\033[1;33m Remove \033[0m             \"$(NAME)\"    \033[0;32m [OK] \033[0m"
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus name

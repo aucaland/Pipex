@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex_utils_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:38:45 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/25 21:15:17 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/27 02:25:27 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,5 @@ int	path_exist(t_pipex *px, char **tmp, char **env_full_path)
 		}
 		tmp++;
 	}
-	px->env_paths = ft_calloc(sizeof(char *), 1);
-	if (!px->env_paths)
-		exit_pipex(px, MALLOC, "get full path", 2);
-	px->env_paths[0] = malloc(sizeof(char) * 1);
-	px->env_paths[0] = "/";
-	px->env_paths[1] = NULL;
 	return (0);
 }

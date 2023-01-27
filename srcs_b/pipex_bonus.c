@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/25 21:20:59 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/27 02:26:02 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
 	get_full_path(*px);
-	get_cmd_paths((*px));
+	if ((*px)->env_paths)
+		get_cmd_paths((*px));
 }
 
 void	here_doc(t_pipex **px, int argc, char **argv, char **envp)
