@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   childs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/28 16:11:40 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/28 21:21:32 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	do_in_child(t_pipex *px, int nbr)
 	else
 	{
 		if (dup2(px->outfile, STDOUT_FILENO) == -1)
-			exit_pipex(px, PERROR, "do_in_child", 1);
+			exit_pipex(px, "", "", 1);
 		close_fds(px);
 	}
 	if (px->cmd[nbr][0] != '\0')

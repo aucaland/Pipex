@@ -47,11 +47,9 @@ endif
 
 ## Rules ##
 
-all:		$(NAME)
+all:		build_lib $(NAME)
 
 $(NAME):	$(OBJ)
-	@echo "Making LIBFT"
-	@make all -C LIBFT
 	@$(CC) $^ -o $(NAME) $(CFLAGS) $(CH_FLAG) -L./LIBFT -lft
 	@echo  "-\033[1;35mEdit/Create: \033[0m $?                    \033[0;32m[OK]\033[0m"
 	@$(MODE)
