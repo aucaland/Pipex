@@ -60,7 +60,6 @@ SRCS_NAME		=	ft_atoi.c\
 				ft_freetabi.c\
 				ft_free_tab.c\
 				ft_strlen_tab.c\
-				close_fds.c\
 				ft_strcmp.c
 
 OBJS		=	$(SRCS_NAME:%.c=%.o)

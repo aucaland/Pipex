@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/27 16:13:35 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/28 16:11:40 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,14 @@ void	exit_pipex(t_pipex *px, char *err, char *location, int cleaned)
 		ft_putendl_fd(err, 2);
 		exit(0);
 	}
-	if (ft_strlen(err) > 0 && ft_strncmp(err, PERROR, 6))
-	{
+	else if (ft_strlen(err) > 0 && ft_strncmp(err, PERROR, 6) == 0)
 		perror("");
-		free_pipex(px, cleaned);
-		return ;
-	}
-	if (ft_strlen(err) > 0)
+	else if (ft_strlen(err) > 0)
 	{
 		ft_putstr_fd(err, 2);
 		ft_putendl_fd(location, 2);
 	}
-	if (px)
-		free_pipex(px, cleaned);
-	exit(EXIT_SUCCESS);
+	free_pipex(px, cleaned);
 }
 
 char	**ft_free_tab_pipex(char **tab, int size)
@@ -42,7 +36,8 @@ char	**ft_free_tab_pipex(char **tab, int size)
 	i = 0;
 	while (i < size)
 	{
-		free(tab[i]);
+		if (tab[i])
+			free(tab[i]);
 		i++;
 	}
 	free(tab);
@@ -51,22 +46,36 @@ char	**ft_free_tab_pipex(char **tab, int size)
 
 void	free_pipex(t_pipex *px, int cleaned)
 {
+	close_fds(px);
 	if (!cleaned)
 	{
 		free(px);
-		return ;
+		exit(EXIT_SUCCESS);
 	}
 	if (px->cmd)
-		ft_free_tab(px->cmd);
+		ft_free_tab_pipex(px->cmd, px->nb_cmd);
+	if (px->cmd_paths)
+		ft_free_tab_pipex(px->cmd_paths, px->nb_cmd);
 	if (px->cmd_args)
 	{
-		while ((px->nb_cmd)-- > 0)
+		while ((px->nb_cmd--) > 0 && px->cmd_args[px->nb_cmd])
 			ft_free_tab(px->cmd_args[px->nb_cmd]);
 		free(px->cmd_args);
 	}
 	if (px->env_paths)
 		ft_free_tab(px->env_paths);
-	if (px->cmd_paths)
-		ft_free_tab(px->cmd_paths);
 	free(px);
+	exit(EXIT_SUCCESS);
+}
+
+void	close_fds(t_pipex *px)
+{
+	if (px->pipes_fd[0] != -1)
+		close(px->pipes_fd[0]);
+	if (px->pipes_fd[1] != -1)
+		close(px->pipes_fd[1]);
+	if (px->outfile != -1)
+		close(px->outfile);
+	if (px->infile != -1)
+		close(px->infile);
 }

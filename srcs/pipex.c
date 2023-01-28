@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:27:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/26 18:05:43 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/28 15:41:09 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 {
 	char	**args;
 
-	if (!*px)
-		*px = malloc(sizeof(t_pipex));
+	args = argv + 2;
+	*px = malloc(sizeof(t_pipex));
 	if (!*px)
 		exit_pipex(*px, MALLOC, "init_struct_values", 0);
-	args = argv + 2;
 	clean_px(*px);
 	(*px)->nb_cmd = argc - 3;
 	(*px)->cmd = ft_calloc(sizeof(char *), (*px)->nb_cmd + 1);
@@ -34,7 +33,8 @@ void	init_struct_values(t_pipex **px, int argc, char **argv, char **envp)
 	get_cmds_args((*px), args);
 	get_files((*px), argv, argc);
 	get_full_path(*px);
-	get_cmd_paths((*px));
+	if ((*px)->env_paths)
+		get_cmd_paths((*px));
 }
 
 int	main(int argc, char **argv, char **envp)
@@ -53,8 +53,6 @@ int	main(int argc, char **argv, char **envp)
 		make_child(px, i);
 		if (i < px->nb_cmd - 1)
 			close(px->pipes_fd[1]);
-		else
-			close(px->outfile);
 	}
 	close(STDIN_FILENO);
 	while (waitpid(-1, NULL, 0) > 0)

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex_utils_bonus.c                                :+:      :+:    :+:   */
+/*   pipex_utills_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:38:45 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/27 16:44:40 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/28 14:47:09 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../h_files_bonus/pipex_bonus.h"
+#include "../h_files_bonus/pipex.h"
 
 void	clean_px(t_pipex *px)
 {
@@ -21,6 +21,8 @@ void	clean_px(t_pipex *px)
 	px->cmd_paths = NULL;
 	px->infile = -1;
 	px->outfile = -1;
+	px->pipes_fd[0] = -1;
+	px->pipes_fd[1] = -1;
 }
 
 void	check_and_dup_infile(t_pipex *px, int *i)
@@ -42,7 +44,7 @@ void	check_and_dup_infile(t_pipex *px, int *i)
 
 int	path_exist(t_pipex *px, char ***tmp, char **env_full_path)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (*tmp[i])

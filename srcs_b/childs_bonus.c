@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../h_files_bonus/pipex_bonus.h"
+#include "../h_files_bonus/pipex.h"
 
 void	do_in_child(t_pipex *px, int nbr)
 {
@@ -19,14 +19,13 @@ void	do_in_child(t_pipex *px, int nbr)
 	{
 		if (dup2(px->pipes_fd[1], STDOUT_FILENO) == -1)
 			exit_pipex(px, PERROR, "do_in_child", 1);
-		close(px->pipes_fd[1]);
+		close_fds(px);
 	}
 	else
 	{
 		if (dup2(px->outfile, STDOUT_FILENO) == -1)
 			exit(0);
-		close(px->outfile);
-		close(px->pipes_fd[1]);
+		close_fds(px);
 	}
 	if (px->cmd[nbr][0] != '\0')
 		execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
@@ -35,6 +34,7 @@ void	do_in_child(t_pipex *px, int nbr)
 	ft_putstr_fd("bash: ", 2);
 	ft_putstr_fd(px->cmd_args[nbr][0], 2);
 	ft_putendl_fd(": command not found", 2);
+	close_fds(px);
 	exit (0);
 }
 
@@ -43,10 +43,7 @@ void	make_child(t_pipex *px, int nbr)
 	if (nbr > 0)
 	{
 		if (px->pipes_fd[0] != -1 && dup2(px->pipes_fd[0], STDIN_FILENO) == -1)
-		{
-			close_fds(2, px->pipes_fd[0], px->pipes_fd[1]);
 			exit_pipex(px, DUP2, "make_child", 1);
-		}
 		close(px->pipes_fd[0]);
 	}
 	if (nbr < px->nb_cmd - 1 && pipe(px->pipes_fd) == -1)

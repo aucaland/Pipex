@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../h_files_bonus/pipex_bonus.h"
+#include "../h_files_bonus/pipex.h"
 #define PROMPT_HDOC "> "
 
 int	check_here_doc(t_pipex **px, char **argv)

@@ -9,7 +9,7 @@ H_DIR_B				= h_files_bonus
 SRC_NAME			= pipex.c errors.c childs.c parsing.c pipex_utils.c pipex_utils.c
 SRC_NAME_BONUS		= pipex_bonus.c errors_bonus.c childs_bonus.c parsing_bonus.c pipex_utils_bonus.c
 INCS_NAME			= pipex.h errors.h
-INCS_NAME_BONUS		= pipex_bonus.h errors_bonus.h
+INCS_NAME_BONUS		= pipex.h errors.h
 
 
 OBJ_NAME		=	$(SRC_NAME:%.c=%.o)

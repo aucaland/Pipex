@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   errors_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/27 16:30:37 by aurel            ###   ########.fr       */
+/*   Updated: 2023/01/28 14:47:09 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../h_files_bonus/pipex_bonus.h"
+#include "../h_files_bonus/pipex.h"
 
 void	exit_pipex(t_pipex *px, char *err, char *location, int cleaned)
 {
@@ -46,17 +46,11 @@ char	**ft_free_tab_pipex(char **tab, int size)
 
 void	free_pipex(t_pipex *px, int cleaned)
 {
-	if (access(".here_doc.txt", F_OK) == 0)
-		unlink(".here_doc.txt");
-	if (px->infile != -1)
-		close(px->infile);
-	if (px->outfile != -1)
-		close(px->outfile);
+	close_fds(px);
 	if (!cleaned)
 	{
-		if (px)
-			free(px);
-		exit(EXIT_SUCCESS) ;
+		free(px);
+		exit(EXIT_SUCCESS);
 	}
 	if (px->cmd)
 		ft_free_tab_pipex(px->cmd, px->nb_cmd);
@@ -72,4 +66,18 @@ void	free_pipex(t_pipex *px, int cleaned)
 		ft_free_tab(px->env_paths);
 	free(px);
 	exit(EXIT_SUCCESS);
+}
+
+void	close_fds(t_pipex *px)
+{
+	if (access(".here_doc.txt", F_OK) == 0)
+		unlink(".here_doc.txt");
+	if (px->pipes_fd[0] != -1)
+		close(px->pipes_fd[0]);
+	if (px->pipes_fd[1] != -1)
+		close(px->pipes_fd[1]);
+	if (px->outfile != -1)
+		close(px->outfile);
+	if (px->infile != -1)
+		close(px->infile);
 }

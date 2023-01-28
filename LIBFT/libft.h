@@ -119,7 +119,6 @@ char				**ft_free_tab(char **tab);
 
 int					ft_isspace(char str);
 size_t				ft_strlen_tab(char **s);
-void				close_fds(int count, ...);
 int					ft_strcmp(const char *first, const char *second);
 
 //convert_base(piscine) //
