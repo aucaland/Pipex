@@ -6,7 +6,7 @@
 /*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:02:56 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/28 14:47:09 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/01/28 16:14:55 by aucaland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ void	free_pipex(t_pipex *px, int cleaned)
 
 void	close_fds(t_pipex *px)
 {
+	if (px->infile != -1)
+		close(px->infile);
 	if (access(".here_doc.txt", F_OK) == 0)
 		unlink(".here_doc.txt");
 	if (px->pipes_fd[0] != -1)
@@ -78,6 +80,4 @@ void	close_fds(t_pipex *px)
 		close(px->pipes_fd[1]);
 	if (px->outfile != -1)
 		close(px->outfile);
-	if (px->infile != -1)
-		close(px->infile);
 }
