@@ -39,10 +39,10 @@ D = 0
 
 ifeq ($(D), 1)
 	CC += -fsanitize=address -g3
-	MODE = echo "\033[0;31m MODE DEBUG SANITIZE \033[0m"
+	MODE = printf %b "\033[0;31m MODE DEBUG SANITIZE \033[0m"
 endif
 ifneq ($(D), 1)
-	MODE = echo "\033[0;31m MODE RELEASE \033[0m"
+	MODE = printf %b "\033[0;31m MODE RELEASE \033[0m"
 endif
 
 ## Rules ##
@@ -51,42 +51,47 @@ all:		build_lib $(NAME)
 
 $(NAME):	$(OBJ)
 	@$(CC) $^ -o $(NAME) $(CFLAGS) $(CH_FLAG) -L./LIBFT -lft
-	@echo  "-\033[1;35mEdit/Create: \033[0m $?                    \033[0;32m[OK]\033[0m"
+	@printf %b	"\n"
+	@printf %b  "\033[1;35m-[$(NAME)]__Edit/Create .o in \033[0m  \033[0;32m[OK]\033[0m\n"
+	@printf %b  "\r"
 	@$(MODE)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c $(INCS_PIPEX)
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) $(CH_FLAG) -o $@ -c $<
-	@echo "-\033[1;92mCompiling : \033[0m $?"
+	@printf %b "-\033[1;35m[$(NAME)]\033[0m__Compiling \033[1;92m$<\033[0m in \033[1;92m$@\033[0m..."
+	@printf "\r"
 
 $(OBJ_DIR_B)/%.o:	$(SRC_DIR_B)/%.c $(INCS_PIPEX_BONUS)
 	@mkdir -p $(OBJ_DIR_B)
 	@$(CC) $(CFLAGS) $(CH_FLAG_BONUS) -o $@ -c $<
-	@echo "-\033[1;92mCompiling : \033[0m $?"
+	@printf %b "-\033[1;35m[$(NAME)]\033[0m__Compiling \033[1;92m$<\033[0m in \033[1;92m$@\033[0m..."
+	@printf "\r"
 
 build_lib:
 	@echo "Making LIBFT"
-	@make all -C LIBFT
+	@make --no-print-directory all -C LIBFT
 
 bonus :	build_lib
 	@mkdir -p exec_bonus
-	make $(NAME_B)
+	@make -s $(NAME_B)
 
 $(NAME_B): $(OBJ_B)
 	@$(CC) $^ -o  $(NAME_B) $(CFLAGS) $(CH_FLAG_BONUS) -L./LIBFT -lft
-	@echo  "-\033[1;35mEdit/Create: \033[0m $?                    \033[0;32m[OK]\033[0m"
+	@printf %b "\n"
+	@printf %b  "-\033[1;35m[$(NAME)]__Edit/Create .o in [$@] \033[0m \033[0;32m[OK]\033[0m\n"
 	@$(MODE)
 
 clean:
 	@rm -rf $(OBJ) $(OBJ_B)
-	@make clean -C LIBFT
-	@echo  "-\033[1;33m Remove objs file  \033[0m  \".o\"         \033[0;32m [OK] \033[0m"
+	@make --no-print-directory clean -C LIBFT
+	@printf %b  "-\033[1;33m[$(NAME)]__Remove objs file  \033[0m  \".o\"         \033[0;32m [OK] \033[0m\n"
 
 fclean: clean
 	@rm -rf $(NAME) $(NAME_B)
-	@make fclean -C LIBFT
-	@echo  "-\033[1;33m Remove \033[0m             \"$(NAME)\"    \033[0;32m [OK] \033[0m"
+	@make --no-print-directory fclean -C LIBFT
+	@printf %b  "-\033[1;33m[$(NAME)]__Remove \033[0m             \"$(NAME)\"    \033[0;32m [OK] \033[0m\n"
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus name
+.PHONY: all clean fclean re bonus name build_lib
