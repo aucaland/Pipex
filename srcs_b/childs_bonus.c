@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/27 16:47:53 by aurel            ###   ########.fr       */
+/*   Updated: 2023/02/03 21:34:21 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	do_in_child(t_pipex *px, int nbr)
 	else
 	{
 		if (dup2(px->outfile, STDOUT_FILENO) == -1)
-			exit_pipex(px, "", "", 1);
+			exit(0);
 		close_fds(px);
 	}
 	if (px->cmd[nbr][0] != '\0')

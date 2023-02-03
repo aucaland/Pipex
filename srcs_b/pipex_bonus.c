@@ -105,7 +105,7 @@ int	main(int argc, char **argv, char **envp)
 		else
 			close(px->outfile);
 	}
-	//close(STDIN_FILENO);
+	close(STDIN_FILENO);
 	while (waitpid(-1, NULL, 0) > 0)
 		;
 	free_pipex(px, 1);

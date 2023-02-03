@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/27 16:07:14 by aurel            ###   ########.fr       */
+/*   Updated: 2023/02/03 21:41:00 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	get_files(t_pipex *px, char **argv, int argc)
 	{
 		ft_putstr_fd("bash: ", 2);
 		ft_putstr_fd(argv[1], 2);
-		ft_putstr_fd(": ", 2);
+		ft_putstr_fd(" : ", 2);
 		perror("");
 	}
 	if (px->here_doc == 0)
@@ -104,8 +104,7 @@ void	get_files(t_pipex *px, char **argv, int argc)
 	if (px->outfile == -1)
 	{
 		ft_putstr_fd("bash: ", 2);
-		ft_putstr_fd(argv[1], 2);
-		ft_putstr_fd(": ", 2);
+		ft_putstr_fd(argv[argc - 1], 2);
 		perror(" ");
 	}
 }

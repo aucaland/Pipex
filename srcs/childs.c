@@ -24,7 +24,7 @@ void	do_in_child(t_pipex *px, int nbr)
 	else
 	{
 		if (dup2(px->outfile, STDOUT_FILENO) == -1)
-			exit_pipex(px, "", "", 1);
+			exit(0);
 		close_fds(px);
 	}
 	if (px->cmd[nbr][0] != '\0')

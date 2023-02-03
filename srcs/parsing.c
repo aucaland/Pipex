@@ -91,15 +91,14 @@ void	get_files(t_pipex *px, char **argv, int argc)
 	{
 		ft_putstr_fd("bash: ", 2);
 		ft_putstr_fd(argv[1], 2);
-		ft_putstr_fd(": ", 2);
+		ft_putstr_fd(" : ", 2);
 		perror("");
 	}
 	px->outfile = open(argv[argc - 1], O_TRUNC | O_WRONLY | O_CREAT, 0644);
 	if (px->outfile == -1)
 	{
 		ft_putstr_fd("bash: ", 2);
-		ft_putstr_fd(argv[1], 2);
-		ft_putstr_fd(": ", 2);
+		ft_putstr_fd(argv[argc - 1], 2);
 		perror(" ");
 	}
 }

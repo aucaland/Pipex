@@ -69,7 +69,6 @@ $(OBJ_DIR_B)/%.o:	$(SRC_DIR_B)/%.c $(INCS_PIPEX_BONUS)
 	@printf "\r"
 
 build_lib:
-	@echo "Making LIBFT"
 	@make --no-print-directory all -C LIBFT
 
 bonus :	build_lib
