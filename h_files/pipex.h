@@ -55,4 +55,6 @@ void		get_cmds(t_pipex *px, char **args);
 void		get_files(t_pipex *px, char **argv, int argc);
 void		get_cmds_args(t_pipex *px, char **args);
 
+int			is_space(char *str);
+
 #endif

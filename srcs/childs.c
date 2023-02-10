@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:03 by aurel             #+#    #+#             */
-/*   Updated: 2023/01/28 21:21:32 by aurel            ###   ########.fr       */
+/*   Updated: 2023/02/10 22:06:48 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	do_in_child(t_pipex *px, int nbr)
 	else
 		exit(0);
 	ft_putstr_fd("bash: ", 2);
-	ft_putstr_fd(px->cmd_args[nbr][0], 2);
+	ft_putstr_fd(px->cmd[nbr], 2);
 	ft_putendl_fd(": command not found", 2);
 	close_fds(px);
 	exit (0);

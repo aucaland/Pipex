@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing_bonus.c                                    :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/27 16:07:14 by aurel            ###   ########.fr       */
+/*   Updated: 2023/02/10 21:53:01 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,17 @@ void	get_cmds(t_pipex *px, char **args)
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
+		if (is_space(args[i]))
+		{
+			px->cmd[i] = ft_strdup(args[i]);
+			if (!px->cmd[i])
+				exit_pipex(px, MALLOC, "get_cmds", 1);
+			continue ;
+		}
 		if (args[i][0] == '\0')
 		{
-			px->cmd[i] = NULL;
+			px->cmd[i] = ft_calloc(sizeof(char), 1);
+			px->cmd[i][0] = '\0';
 			continue ;
 		}
 		split_cmd = ft_split(args[i], ' ');

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   pipex_utils2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 17:02:16 by aucaland          #+#    #+#             */
-/*   Updated: 2023/02/10 20:58:00 by aurel            ###   ########.fr       */
+/*   Created: 2023/02/10 21:48:11 by aurel             #+#    #+#             */
+/*   Updated: 2023/02/10 21:51:18 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../libft.h"
 
-char	*ft_strdup(const char *s1)
+#include "../h_files/pipex.h"
+
+int is_space(char *str)
 {
-	char	*tab;
-	int		i;
-	int		len_src;
-
-	i = 0;
-	len_src = 0;
-	while (s1[len_src])
-		len_src++;
-	tab = malloc(sizeof(char) * (len_src + 1));
-	if (!tab)
-		return (NULL);
-	tab[len_src] = '\0';
-	while (s1[i])
+	int	i;
+	if (!str)
+		return (0);
+	i = ft_strlen(str);
+	while (*str == ' ')
 	{
-		tab[i] = s1[i];
-		i++;
+		i--;
+		++str;
 	}
-	return (tab);
+	if (i == 0)
+		return (1);
+	return (0);
 }
