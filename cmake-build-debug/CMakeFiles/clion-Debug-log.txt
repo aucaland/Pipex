@@ -1,6 +1,6 @@
-/home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/aurel/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/linux/ninja -G Ninja -S /home/aurel/Documents/CLionProjects/Pipex -B /home/aurel/Documents/CLionProjects/Pipex/cmake-build-debug
--- The C compiler identification is GNU 12.2.1
--- The CXX compiler identification is GNU 12.2.1
+/app/extra/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /nfs/homes/aucaland/Documents/tronc_commun/Pipex -B /nfs/homes/aucaland/Documents/tronc_commun/Pipex/cmake-build-debug
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Check for working C compiler: /usr/bin/cc - skipped
@@ -15,7 +15,7 @@
 CMake Error at CMakeLists.txt:11 (add_executable):
   Cannot find source file:
 
-    objs/test.o
+    LIBFT/objs/ft_atoi.o
 
 
 CMake Error at CMakeLists.txt:11 (add_executable):
