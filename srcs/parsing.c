@@ -6,7 +6,7 @@
 /*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:26:56 by aucaland          #+#    #+#             */
-/*   Updated: 2023/02/10 21:53:01 by aurel            ###   ########.fr       */
+/*   Updated: 2023/02/10 22:14:44 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	get_cmds(t_pipex *px, char **args)
 	int		i;
 
 	i = -1;
+	split_cmd = NULL;
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
@@ -79,15 +80,7 @@ void	get_cmds(t_pipex *px, char **args)
 			px->cmd[i][0] = '\0';
 			continue ;
 		}
-		split_cmd = ft_split(args[i], ' ');
-		if (!split_cmd)
-			exit_pipex(px, MALLOC, "get_cmds", 1);
-		px->cmd[i] = ft_strdup(split_cmd[0]);
-		if (!px->cmd[i])
-		{
-			ft_free_tab(split_cmd);
-			exit_pipex(px, MALLOC, "", 1);
-		}
+		fill_cmd(px, args, split_cmd, i);
 		ft_free_tab(split_cmd);
 	}
 }

@@ -1,214 +1,214 @@
-==236341== Memcheck, a memory error detector
-==236341== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==236341== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
-==236341== Command: ./pipex test1  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  test2
-==236341== Parent PID: 234218
-==236341== 
-==236367== Syscall param execve(argv[0]) points to unaddressable byte(s)
-==236367==    at 0x4CD945B: execve (syscall-template.S:120)
-==236367==    by 0x40185A: do_in_child (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4019BA: make_child (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401419: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==236367== 
-==236367== Syscall param execve(argv) points to unaddressable byte(s)
-==236367==    at 0x4CD945B: execve (syscall-template.S:120)
-==236367==    by 0x40185A: do_in_child (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4019BA: make_child (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401419: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==  Address 0x50162d8 is 0 bytes after a block of size 8 alloc'd
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x402CCB: ft_split (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401F40: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x40134B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236366== 
-==236366== FILE DESCRIPTORS: 4 open (3 std) at exit.
-==236366== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
-==236366==    <inherited from parent>
-==236366== 
-==236366== 
-==236366== HEAP SUMMARY:
-==236366==     in use at exit: 733 bytes in 28 blocks
-==236366==   total heap usage: 65 allocs, 37 frees, 2,368 bytes allocated
-==236366== 
-==236366== 16 bytes in 1 blocks are still reachable in loss record 1 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x401ECD: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x40134B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 16 bytes in 2 blocks are still reachable in loss record 2 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x402CCB: ft_split (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401F40: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x40134B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 17 bytes in 1 blocks are still reachable in loss record 3 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x4028C0: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x40239A: get_path_if_access (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401B4B: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401392: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 21 bytes in 1 blocks are still reachable in loss record 4 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x402933: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4024CF: fix_null_path (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401B7F: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401392: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 22 bytes in 2 blocks are still reachable in loss record 5 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x402933: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401C13: get_cmds (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401335: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 24 bytes in 1 blocks are still reachable in loss record 6 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401289: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 24 bytes in 1 blocks are still reachable in loss record 7 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4012DE: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 64 bytes in 1 blocks are still reachable in loss record 8 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x401213: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 144 bytes in 1 blocks are still reachable in loss record 9 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401A1B: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401373: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== 385 bytes in 17 blocks are still reachable in loss record 10 of 10
-==236366==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236366==    by 0x4028C0: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401A94: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x401373: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236366== 
-==236366== LEAK SUMMARY:
-==236366==    definitely lost: 0 bytes in 0 blocks
-==236366==    indirectly lost: 0 bytes in 0 blocks
-==236366==      possibly lost: 0 bytes in 0 blocks
-==236366==    still reachable: 733 bytes in 28 blocks
-==236366==         suppressed: 0 bytes in 0 blocks
-==236366== 
-==236366== For lists of detected and suppressed errors, rerun with: -s
-==236366== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==236367== 
-==236367== FILE DESCRIPTORS: 4 open (3 std) at exit.
-==236367== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
-==236367==    <inherited from parent>
-==236367== 
-==236367== 
-==236367== HEAP SUMMARY:
-==236367==     in use at exit: 733 bytes in 28 blocks
-==236367==   total heap usage: 65 allocs, 37 frees, 2,368 bytes allocated
-==236367== 
-==236367== 16 bytes in 1 blocks are still reachable in loss record 1 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x401ECD: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x40134B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 16 bytes in 2 blocks are still reachable in loss record 2 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x402CCB: ft_split (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401F40: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x40134B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 17 bytes in 1 blocks are still reachable in loss record 3 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4028C0: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x40239A: get_path_if_access (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401B4B: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401392: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 21 bytes in 1 blocks are still reachable in loss record 4 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x402933: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4024CF: fix_null_path (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401B7F: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401392: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 22 bytes in 2 blocks are still reachable in loss record 5 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x402933: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401C13: get_cmds (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401335: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 24 bytes in 1 blocks are still reachable in loss record 6 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401289: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 24 bytes in 1 blocks are still reachable in loss record 7 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4012DE: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 64 bytes in 1 blocks are still reachable in loss record 8 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x401213: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 144 bytes in 1 blocks are still reachable in loss record 9 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4026F1: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401A1B: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401373: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== 385 bytes in 17 blocks are still reachable in loss record 10 of 10
-==236367==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
-==236367==    by 0x4028C0: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401A94: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x401373: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367==    by 0x4013F3: main (in /home/aurel/Documents/CLionProjects/Pipex/pipex)
-==236367== 
-==236367== LEAK SUMMARY:
-==236367==    definitely lost: 0 bytes in 0 blocks
-==236367==    indirectly lost: 0 bytes in 0 blocks
-==236367==      possibly lost: 0 bytes in 0 blocks
-==236367==    still reachable: 733 bytes in 28 blocks
-==236367==         suppressed: 0 bytes in 0 blocks
-==236367== 
-==236367== For lists of detected and suppressed errors, rerun with: -s
-==236367== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
-==236341== 
-==236341== FILE DESCRIPTORS: 3 open (2 std) at exit.
-==236341== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
-==236341==    <inherited from parent>
-==236341== 
-==236341== 
-==236341== HEAP SUMMARY:
-==236341==     in use at exit: 0 bytes in 0 blocks
-==236341==   total heap usage: 65 allocs, 65 frees, 2,368 bytes allocated
-==236341== 
-==236341== All heap blocks were freed -- no leaks are possible
-==236341== 
-==236341== For lists of detected and suppressed errors, rerun with: -s
-==236341== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==238090== Memcheck, a memory error detector
+==238090== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==238090== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
+==238090== Command: ./exec_bonus/pipex test1  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  test2
+==238090== Parent PID: 234218
+==238090== 
+==238118== Syscall param execve(argv[0]) points to unaddressable byte(s)
+==238118==    at 0x4CD945B: execve (syscall-template.S:120)
+==238118==    by 0x401B38: do_in_child (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401C9B: make_child (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016CA: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==238118== 
+==238118== Syscall param execve(argv) points to unaddressable byte(s)
+==238118==    at 0x4CD945B: execve (syscall-template.S:120)
+==238118==    by 0x401B38: do_in_child (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401C9B: make_child (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016CA: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==  Address 0x50162e8 is 0 bytes after a block of size 8 alloc'd
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x403050: ft_split (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4021F0: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x40143B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238117== 
+==238117== FILE DESCRIPTORS: 4 open (3 std) at exit.
+==238117== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
+==238117==    <inherited from parent>
+==238117== 
+==238117== 
+==238117== HEAP SUMMARY:
+==238117==     in use at exit: 749 bytes in 28 blocks
+==238117==   total heap usage: 65 allocs, 37 frees, 2,384 bytes allocated
+==238117== 
+==238117== 16 bytes in 1 blocks are still reachable in loss record 1 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x40217D: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x40143B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 16 bytes in 2 blocks are still reachable in loss record 2 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x403050: ft_split (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4021F0: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x40143B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 17 bytes in 1 blocks are still reachable in loss record 3 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402C45: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x40264A: get_path_if_access (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401E2C: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401482: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 21 bytes in 1 blocks are still reachable in loss record 4 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402CB8: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x40277F: fix_null_path (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401E60: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401482: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 22 bytes in 2 blocks are still reachable in loss record 5 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402CB8: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401EFC: get_cmds (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401425: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 24 bytes in 1 blocks are still reachable in loss record 6 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401379: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 24 bytes in 1 blocks are still reachable in loss record 7 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4013CE: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 80 bytes in 1 blocks are still reachable in loss record 8 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x401227: check_here_doc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401670: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 144 bytes in 1 blocks are still reachable in loss record 9 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401CFC: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401463: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== 385 bytes in 17 blocks are still reachable in loss record 10 of 10
+==238117==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238117==    by 0x402C45: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401D75: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x401463: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238117== 
+==238117== LEAK SUMMARY:
+==238117==    definitely lost: 0 bytes in 0 blocks
+==238117==    indirectly lost: 0 bytes in 0 blocks
+==238117==      possibly lost: 0 bytes in 0 blocks
+==238117==    still reachable: 749 bytes in 28 blocks
+==238117==         suppressed: 0 bytes in 0 blocks
+==238117== 
+==238117== For lists of detected and suppressed errors, rerun with: -s
+==238117== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==238118== 
+==238118== FILE DESCRIPTORS: 4 open (3 std) at exit.
+==238118== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
+==238118==    <inherited from parent>
+==238118== 
+==238118== 
+==238118== HEAP SUMMARY:
+==238118==     in use at exit: 749 bytes in 28 blocks
+==238118==   total heap usage: 65 allocs, 37 frees, 2,384 bytes allocated
+==238118== 
+==238118== 16 bytes in 1 blocks are still reachable in loss record 1 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x40217D: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x40143B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 16 bytes in 2 blocks are still reachable in loss record 2 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x403050: ft_split (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4021F0: get_cmds_args (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x40143B: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 17 bytes in 1 blocks are still reachable in loss record 3 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402C45: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x40264A: get_path_if_access (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401E2C: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401482: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 21 bytes in 1 blocks are still reachable in loss record 4 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402CB8: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x40277F: fix_null_path (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401E60: get_cmd_paths (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401482: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 22 bytes in 2 blocks are still reachable in loss record 5 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402CB8: ft_strdup (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401EFC: get_cmds (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401425: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 24 bytes in 1 blocks are still reachable in loss record 6 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401379: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 24 bytes in 1 blocks are still reachable in loss record 7 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4013CE: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 80 bytes in 1 blocks are still reachable in loss record 8 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x401227: check_here_doc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401670: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 144 bytes in 1 blocks are still reachable in loss record 9 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402A76: ft_calloc (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401CFC: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401463: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== 385 bytes in 17 blocks are still reachable in loss record 10 of 10
+==238118==    at 0x4E050C5: malloc (vg_replace_malloc.c:393)
+==238118==    by 0x402C45: ft_strjoin (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401D75: get_full_path (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x401463: init_struct_values (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118==    by 0x4016A4: main (in /home/aurel/Documents/CLionProjects/Pipex/exec_bonus/pipex)
+==238118== 
+==238118== LEAK SUMMARY:
+==238118==    definitely lost: 0 bytes in 0 blocks
+==238118==    indirectly lost: 0 bytes in 0 blocks
+==238118==      possibly lost: 0 bytes in 0 blocks
+==238118==    still reachable: 749 bytes in 28 blocks
+==238118==         suppressed: 0 bytes in 0 blocks
+==238118== 
+==238118== For lists of detected and suppressed errors, rerun with: -s
+==238118== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==238090== 
+==238090== FILE DESCRIPTORS: 3 open (2 std) at exit.
+==238090== Open file descriptor 3: /home/aurel/Documents/CLionProjects/Pipex/valgrind.log
+==238090==    <inherited from parent>
+==238090== 
+==238090== 
+==238090== HEAP SUMMARY:
+==238090==     in use at exit: 0 bytes in 0 blocks
+==238090==   total heap usage: 65 allocs, 65 frees, 2,384 bytes allocated
+==238090== 
+==238090== All heap blocks were freed -- no leaks are possible
+==238090== 
+==238090== For lists of detected and suppressed errors, rerun with: -s
+==238090== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

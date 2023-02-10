@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aucaland <aucaland@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: aurel <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 19:49:03 by aucaland          #+#    #+#             */
-/*   Updated: 2023/01/28 15:02:24 by aucaland         ###   ########.fr       */
+/*   Updated: 2023/02/10 22:13:00 by aurel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ void		get_files(t_pipex *px, char **argv, int argc);
 void		get_cmds_args(t_pipex *px, char **args);
 
 int			is_space(char *str);
+void		fill_cmd(t_pipex *px, char **args, char **split_cmd, int i);
 
 #endif
