@@ -39,6 +39,7 @@ void		exit_pipex(t_pipex *px, char *err, char *location, int cleaned);
 void		free_pipex(t_pipex *px, int cleaned);
 char		**ft_free_tab_pipex(char **tab, int size);
 void		close_fds(t_pipex *px);
+void		print_cmd_not_found(t_pipex *px, char *cmd);
 
 void		clean_px(t_pipex *px);
 void		do_in_child(t_pipex *px, int nbr);

@@ -79,3 +79,20 @@ void	close_fds(t_pipex *px)
 	if (px->infile != -1)
 		close(px->infile);
 }
+
+void	print_cmd_not_found(t_pipex *px, char *cmd)
+{
+	char	*cmd_ret;
+	char	*tmp;
+
+	tmp = ft_strjoin("bash: ", cmd);
+	if (!tmp)
+		exit_pipex(px, MALLOC, "print_cmd", 1);
+	cmd_ret = ft_strjoin(tmp, ": command not found\n");
+	if (!cmd_ret)
+		exit_pipex(px, MALLOC, "print_cmd", 1);
+	free(tmp);
+	ft_putstr_fd(cmd_ret, 2);
+	free(cmd_ret);
+	cmd_ret = NULL;
+}
