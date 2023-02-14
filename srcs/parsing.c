@@ -67,7 +67,7 @@ void	get_cmds(t_pipex *px, char **args)
 	while (++i < px->nb_cmd)
 	{
 		px->cmd_paths[i] = NULL;
-		if (is_space(args[i]))
+		if (args[i][0] && is_space(args[i]))
 		{
 			px->cmd[i] = ft_strdup(args[i]);
 			if (!px->cmd[i])
