@@ -31,9 +31,7 @@ void	do_in_child(t_pipex *px, int nbr)
 		execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
 	else
 		exit(0);
-	ft_putstr_fd("bash: ", 2);
-	ft_putstr_fd(px->cmd_args[nbr][0], 2);
-	ft_putendl_fd(": command not found", 2);
+	print_cmd_not_found(px, px->cmd[nbr]);
 	close_fds(px);
 	exit (0);
 }
