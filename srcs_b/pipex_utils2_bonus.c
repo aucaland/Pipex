@@ -40,4 +40,5 @@ void	fill_cmd(t_pipex *px, char **args, char **split_cmd, int i)
 		ft_free_tab(split_cmd);
 		exit_pipex(px, MALLOC, "", 1);
 	}
+	ft_free_tab(split_cmd);
 }
