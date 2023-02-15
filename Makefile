@@ -48,7 +48,7 @@ endif
 ## Rules ##
 
 all:		build_lib $(NAME)
-
+blabla
 $(NAME):	$(OBJ)
 	@$(CC) $^ -o $(NAME) $(CFLAGS) $(CH_FLAG) -L./LIBFT -lft
 	@printf %b	"\n"
