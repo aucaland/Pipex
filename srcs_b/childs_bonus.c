@@ -30,7 +30,10 @@ void	do_in_child(t_pipex *px, int nbr)
 	if (px->cmd[nbr][0] != '\0')
 		execve(px->cmd_paths[nbr], px->cmd_args[nbr], px->env);
 	else
+	{
+		print_cmd_not_found(px, px->cmd[nbr]);
 		exit(0);
+	}
 	print_cmd_not_found(px, px->cmd[nbr]);
 	close_fds(px);
 	exit (0);

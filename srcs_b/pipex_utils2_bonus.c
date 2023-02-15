@@ -12,9 +12,10 @@
 
 #include "../h_files/pipex.h"
 
-int is_space(char *str)
+int	is_space(char *str)
 {
 	int	i;
+
 	if (!str)
 		return (0);
 	i = ft_strlen(str);

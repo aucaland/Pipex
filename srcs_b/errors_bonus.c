@@ -87,6 +87,11 @@ void	print_cmd_not_found(t_pipex *px, char *cmd)
 	char	*cmd_ret;
 	char	*tmp;
 
+	if (cmd[0] == '\0')
+	{
+		ft_putendl_fd("Command '' not found", 2);
+		return ;
+	}
 	tmp = ft_strjoin("bash: ", cmd);
 	if (!tmp)
 		exit_pipex(px, MALLOC, "print_cmd", 1);
