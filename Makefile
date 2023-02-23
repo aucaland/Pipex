@@ -10,7 +10,7 @@ SRC_NAME			= pipex.c errors.c childs.c parsing.c pipex_utils.c pipex_utils.c pip
 SRC_NAME_BONUS		= pipex_bonus.c errors_bonus.c childs_bonus.c parsing_bonus.c pipex_utils_bonus.c pipex_utils2_bonus.c
 INCS_NAME			= pipex.h errors.h
 INCS_NAME_BONUS		= pipex.h errors.h
-
+LIBS_A				= LIBFT/libft.a
 
 OBJ_NAME		=	$(SRC_NAME:%.c=%.o)
 OBJ_NAME_B		=	$(SRC_NAME_BONUS:%.c=%.o)
@@ -47,35 +47,36 @@ endif
 
 ## Rules ##
 
-all:		build_lib $(NAME)
-blabla
-$(NAME):	$(OBJ)
+all:		$(NAME)
+
+$(LIBS_A):	force
+	@make --no-print-directory all -C LIBFT
+
+$(NAME):	$(OBJ) $(LIBS_A)
 	@$(CC) $^ -o $(NAME) $(CFLAGS) $(CH_FLAG) -L./LIBFT -lft
 	@printf %b	"\n"
 	@printf %b  "\033[1;35m-[$(NAME)]__Edit/Create .o in \033[0m  \033[0;32m[OK]\033[0m\n"
 	@printf %b  "\r"
 	@$(MODE)
 
-$(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c $(INCS_PIPEX)
+$(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c $(INCS_PIPEX) $(LIBS_A)
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) $(CH_FLAG) -o $@ -c $<
 	@printf %b "-\033[1;35m[$(NAME)]\033[0m__Compiling \033[1;92m$<\033[0m in \033[1;92m$@\033[0m..."
 	@printf "\r"
 
-$(OBJ_DIR_B)/%.o:	$(SRC_DIR_B)/%.c $(INCS_PIPEX_BONUS)
+$(OBJ_DIR_B)/%.o:	$(SRC_DIR_B)/%.c $(INCS_PIPEX_BONUS) $(LIBS_A)
 	@mkdir -p $(OBJ_DIR_B)
 	@$(CC) $(CFLAGS) $(CH_FLAG_BONUS) -o $@ -c $<
 	@printf %b "-\033[1;35m[$(NAME)]\033[0m__Compiling \033[1;92m$<\033[0m in \033[1;92m$@\033[0m..."
 	@printf "\r"
 
-build_lib:
-	@make --no-print-directory all -C LIBFT
 
-bonus :	build_lib
+bonus :	$(NAME_B)
 	@mkdir -p exec_bonus
 	@make -s $(NAME_B)
 
-$(NAME_B): $(OBJ_B)
+$(NAME_B): $(OBJ_B) $(LIBS_A)
 	@$(CC) $^ -o  $(NAME_B) $(CFLAGS) $(CH_FLAG_BONUS) -L./LIBFT -lft
 	@printf %b "\n"
 	@printf %b  "-\033[1;35m[$(NAME)]__Edit/Create .o in [$@] \033[0m \033[0;32m[OK]\033[0m\n"
@@ -93,4 +94,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus name build_lib
+.PHONY: all clean fclean re bonus name build_lib force
