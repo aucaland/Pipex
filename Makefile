@@ -94,4 +94,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus name build_lib force
+.PHONY: all clean fclean re bonus name force
