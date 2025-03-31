@@ -19,7 +19,7 @@ Pipex is a project designed to explore the inner workings of UNIX pipes by imple
 ## 🔧 Installation & Compilation  
 Clone the repository and compile the project:  
 ```sh
-git clone https://github.com/your-username/pipex.git
+git clone XXXX
 cd pipex
 make
 ```
